@@ -5,3 +5,267 @@
 :root
     --nav-f-s: 14px
     --nav-c-g: 24px
+
+body
+    font-family: var(--tajawal)
+    text-align: right
+    background-color: #F0F2F5
+    p,.content li
+        line-height: 1.6
+    header.top
+        background-color: white
+main
+    margin-top: 128px
+    flex-flow: row-reverse nowrap
+    align-items: flex-start
+    @extend %F-between
+    column-gap: 16px
+article
+    position: relative
+    width: 70%
+    min-height: 100vh
+    margin-bottom: 32px
+    header
+        box-shadow: var(--1db-ambient)
+        padding: 32px 16px
+        border-radius: 12px
+        background-color: white
+        h1
+            margin-block: 0 8px
+            font-size: 32px
+            font-family: var(--cairo)
+        .date
+            font-size: 14px
+            direction: rtl
+            display: flex
+            flex-flow: row
+            color: #666
+            .auth
+                padding-right: 8px
+                margin-right: 8px
+                border-right: 2px solid #9999
+        figure,img
+            width: 100%
+        img
+            box-shadow: var(--2db-penumbra),var(--2db-ambient),var(--2db-umbra)
+            border-radius: 12px
+            margin-block: 16px
+        p
+            color: #526D7A
+            font-size: 22px
+        details
+            box-shadow: var(--1db-ambient),var(--1db-umbra)
+            border-block: 1px solid #bbb
+            padding: 12px 8px
+            border-radius: 12px
+            summary
+                cursor: pointer
+                font-size: 20px
+                color: var(--primary)
+                list-style: none
+                position: relative
+        details[open] summary::after
+            transform: translateY(-53%) rotate(270deg)
+        details summary::before,details summary::after
+            top: 50%
+            position: absolute
+        details summary::before
+            content: ""
+            background-color: #f0f2f5
+            height: 32px
+            width: 32px
+            border-radius: 50%
+            transform: translateY(-51%)
+            left: 10px
+            border: var(--primary) 1px solid
+        details summary::after
+            content: "\203A"
+            left: 20px
+            color: var(--primary)
+            font-size: 32px
+            font-family: sans-serif
+            transform: translateY(-50%) rotate(90deg)
+            transform-origin: 50% 55%
+        ol
+            margin-top: 8px
+            direction: rtl
+            counter-reset: list
+        li a
+            background-color: #e8e7e7
+            margin-block: 4px
+            padding: 4px
+            counter-increment: list
+            width: 100%
+            display: inline-block
+            transition: background-color .1s
+            border-radius: 4px
+            &::before
+                margin-inline: 4px 6px
+                content: counter(list)"."
+            &:hover
+                text-decoration: underline
+                background-color: #eee
+
+    .path
+        display: flex
+        flex-flow: row
+        column-gap: 8px
+        position: absolute
+        bottom: calc(100% + 8px)
+        right: 8px
+        font-family: var(--cairo)
+        >*
+            line-height: 26px
+        a
+            color: var(--blue-dark)
+
+.container2
+    @media (max-width: 599px)
+        margin-inline: 16px
+    @media (min-width: 600px) and (max-width: 904px)
+        margin-inline: 32px
+    @media (min-width: 905px) and (max-width: 1000px)
+        width: 840px
+        margin-inline: auto
+    @media (min-width: 1000px) and (max-width: 1400px)
+        width: 950px
+        margin-inline: auto
+    @media (min-width: 1400px)
+        width: 1300px
+        margin-inline: auto
+.content
+    box-shadow: var(--1db-ambient)
+    direction: rtl
+    margin-top: 16px
+    background-color: white
+    padding: 16px
+    border-radius: 12px
+    h2
+        margin-block: 16px
+    table
+        border-collapse: collapse
+        td
+            border: 1px #999 solid
+            padding: 4px 8px
+    ul li
+        position: relative
+        padding-right: 16px
+        &:before
+            content: ""
+            right: 0px
+            height: 5px
+            width: 5px
+            border-radius: 50%
+            background-color: var(--primary)
+            @extend %A-center-Y
+    figure
+        margin-inline: auto
+        width: fit-content
+        max-width: 100%
+        img
+            width: 100%
+            box-shadow: var(--2db-penumbra),var(--2db-ambient),var(--2db-umbra)
+            max-width: fit-content
+            min-width: 50%
+            border-radius: 12px
+    ol
+        counter-reset: on
+        li
+            counter-increment: on
+        li::before
+            margin-left: 4px
+            content: counter(on)"."
+            color: var(--primary)
+            font-weight: 600
+
+aside
+    box-shadow: var(--1db-ambient)
+    background-color: white
+    width: 30%
+    border-radius: 12px
+    overflow: hidden
+    padding: 16px 8px
+    .title-a-r
+        padding-left: 4px
+        &::before
+            right: 100%
+    .title-a-l
+        margin-top: -50px
+        padding-right: 4px
+        float: left
+        &::before
+            left: 100%
+    .s-title
+        font-family: 'Cairo'
+        font-size: 22px
+        position: relative
+        &::before
+            content: ""
+            position: absolute
+            @extend %A-center-Y
+            width: 300px
+            height: 4px
+            background-color: var(--primary)
+
+    .icons
+        @extend %F-evenly
+        flex-flow: row
+        margin-block: 16px
+        i
+            height: 48px
+            width: 48px
+            line-height: 48px
+            text-align: center
+            font-size: 26px
+            border-radius: 12px
+            color: white
+            background-color: black
+    .cards
+        margin-top: 64px
+        border-radius: 12px
+        box-shadow: var(--2db-umbra)
+    .card
+        padding: 8px 4px
+        border-bottom: 1px #eee solid
+        overflow: hidden
+        display: flex
+        flex-flow: row-reverse
+        &:hover
+            background-color: #f9f9f9
+        .card-t
+            font-weight: 700
+        img
+            width: fit-content
+            height: 126px
+            aspect-ratio: 1/1
+            object-fit: cover
+            border-radius: 4px
+        .card-txt
+            padding-right: 4px
+            p
+                color: #777
+                overflow: hidden
+                font-size: 14px
+                text-overflow: ellipsis
+                display: -webkit-box
+                -webkit-box-orient: vertical
+                -webkit-line-clamp: 4
+                margin-top: 8px
+                line-height: 16px
+                max-height: 64px
+                margin-bottom: 0
+                direction: rtl
+
+@media (max-width:1000px) 
+    body main
+        flex-flow: column nowrap
+        article,aside
+            width: 100%
+        aside .icons
+            margin-block: 4px
+        aside .cards
+            margin-top: 48px
+        aside .s-title::before
+            width: 100vw
+        aside .card img
+            height: 96px
