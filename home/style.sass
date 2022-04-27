@@ -1,0 +1,428 @@
+@use '../tools/sass/_position' as *
+@use '../tools/sass/_header' as *
+@use '../tools/sass/_footer' as *
+
+:root
+    --nav-f-s: 18px
+    --deg: 230deg
+    --nav-c-g: 30px
+@media (min-width:750px)
+        .actions
+            display: flex
+            flex-flow: row-reverse nowrap
+            column-gap: 16px
+            align-items: center
+            justify-content: space-evenly
+
+main
+    text-align: right
+    section
+        margin-bottom: 64px
+    figure
+        margin-block: 16px
+        img
+            animation: upDown 6s infinite forwards linear
+            width: 100%
+    .subtitle-sp
+        display: block
+        font-family: var(--cairo)
+        font-size: 19px
+        color: var(--glo)
+    h1,h2
+        font-family: var(--display)
+        font-weight: 700
+        font-size: 25px
+        margin-block: 16px 32px
+.sub-p
+    padding-top: 32px
+    font-family: var(--cairo)
+    font-size: 20px
+    line-height: 34px
+    text-align: justify
+    direction: rtl
+    color: #787878
+.primaryBtn
+    white-space: nowrap
+    display: inline-block
+    background-color: var(--primary)
+    background-image: var(--red-gradiant)
+    padding: 10px 24px
+    font-family: var(--cairo)
+    color: white
+    font-weight: 700
+    border-radius: 100px
+    box-shadow: var(--red-shadow)
+    transition: box-shadow .15s ease-out, background .15s ease-out
+    &:hover
+        box-shadow: var(--dblue-shadow)
+        background: var(--blue-dark)
+.underLine
+    position: relative
+    &:after,&::before
+        content: ""
+        border-radius: 20px
+        position: absolute
+        bottom: -32px
+        height: 5px
+    &:after
+        right: 0
+        width: 24px
+        background: transparent linear-gradient(180deg,hsl(356.8, 92.6%, 68.2%) 0%,hsl(339.5, 67.3%, 38.4%) 100%)
+    &:before
+        right: 32px
+        width: 55px
+        background-color: #dbdbdb
+@media (min-width:800px)
+    .s1
+        margin-top: 64px
+        .wrapper
+            align-items: center
+            flex-flow: row nowrap
+            display: flex
+            column-gap: 10px
+        .s-txt
+            width: 40%
+        figure
+            width: 60%
+@media (min-width:870px)
+    main section
+        h1
+            font-size: 35px
+    .s1
+        .s-txt,figure
+            width: 50%
+
+.s1 .search
+    background: #E1EEF5
+    border: 1px solid #AAAAAA
+    position: relative
+    height: 54px
+    border-radius: 50px
+    margin-block: 16px
+    padding: 8px 16px 8px 86px
+    [type="submit"]
+        @extend .primaryBtn
+        padding-block: 6px
+        position: absolute
+        top: 7px
+        left: 8px
+        border: none
+        cursor: pointer
+    [type="search"]
+        min-width: 160px
+        outline: none
+        direction: rtl
+        font-size: 20px
+        font-family: var(--tajawal)
+        border: none
+        height: 100%
+        width: 100%
+        background: transparent
+
+.cards-0
+    padding-top: 40px
+    .card-0
+        transform: translateX(-50px)
+        opacity: 0
+        background-color: white
+        letter-spacing: 1px
+        display: inline-block
+        margin-bottom: 32px
+        box-shadow: 0px 10px 35px 0px rgba(0,0,0,.1)
+        border-radius: 16px
+        padding: 32px 16px
+        font-family: var(--cairo)
+        transition: background var(--fast)
+        &:hover
+            background-image: var(--red-gradiant)
+            h3
+                color: white
+            p
+                transition: color var(--fast)
+                color: #ccc
+            i
+                background: var(--dark-red)
+        i
+            padding: 24px
+            margin-bottom: 32px
+            border-radius: 24px
+            font-size: 96px
+            box-shadow: var(--red-shadow)
+            color: white
+            background: var(--red-gradiant)
+
+        h3
+            color: var(--blue-dark)
+            font-size: 28px
+        p
+            color: #787878
+            font-size: 22px
+            line-height: 30px
+            margin-top: 0
+
+@media (min-width:544px)
+    .cards-0
+        padding-top: 96px
+        display: grid
+        @include carts(240px, 240px, 16px, 16px)
+        .card-0
+            margin: 0
+            i
+                margin-bottom: 8px
+            p
+                margin: 0
+            &:last-child
+                transform: translateX(50%)
+
+@media (min-width:816px)
+    .cards-0
+        grid: auto /repeat(3, auto)
+        .card-0:last-child
+            transform: translateX(0)
+
+.s3 h2
+    margin-bottom: 64px
+.arrow-0
+    display: none
+@media (min-width:1000px)
+    main .s5
+        flex-flow: row nowrap
+        column-gap: 20px
+        .arrow-0
+            position: absolute
+            display: block
+            width: 150px
+            top: 0
+            right: -75px
+        .step:nth-of-type(2)
+            transform: translateY(30px)
+        .step:nth-of-type(3)
+            transform: translateY(60px)
+
+    .s3
+        h2,.subtitle-sp
+            width: 40%
+            margin-inline: auto
+            text-align: center
+        h2
+            &:before,&:after
+                transform: translateX(-50%)
+            &:before
+                left: calc( 50% - 24px )
+            &:after
+                left: calc( 50% + 24px )
+
+    .s2
+        h2,.subtitle-sp
+            display: block
+            width: 520px
+            margin: auto
+            text-align: right
+        .s-txt
+            &:before
+                content: ""
+                height: calc(27vw + 130px)
+                aspect-ratio: 1/1
+                display: inline-block
+                position: absolute
+                background-size: cover
+                background-image: url('../tools/images/home/circle.png')
+                top: 420px
+                transition: transform 1s
+                transform: rotate(var(--deg))
+                right: calc( ( -27vw - 100px ) / 2)
+.cntrl
+    position: relative
+
+    >i
+        @extend %A-center-Y
+        font-size: 56px
+        z-index: 2
+        color: var(--blue-dark)
+        cursor: pointer
+        background-color: #ffffffd6
+        height: 64px
+        width: 64px
+        text-align: center
+        line-height: 64px
+        border-radius: 50%
+        &:hover
+            color: var(--primary)
+        &.fa-angle-right
+            right: 8px
+        &.fa-angle-left
+            left: 8px
+.cards-1
+    direction: rtl
+    scroll-behavior: smooth
+    width: 100%
+    overflow-x: scroll
+    padding-top: 32px
+    padding: 16px
+    box-shadow: 0 4px 4px #0000002e inset ,0 -2px 6px #0000002e inset
+    -ms-overflow-style: none
+    scrollbar-width: none
+    &::-webkit-scrollbar
+        display: none
+
+    .scroll
+        @extend %F-evenly
+        column-gap: 16px
+        width: fit-content
+    .card-1
+        transform: translateX(-50px)
+        opacity: 0
+        background-color: white
+        position: relative
+        border-radius: 16px
+        overflow: hidden
+        width: 220px
+        box-shadow: var(--4db-penumbra) , var(--4db-Umbra)
+        padding-bottom: 140px
+        h3
+            font-family: var(--cairo)
+        &:hover
+            .bottom-half
+                height: 100%
+                padding-top: 40px
+                p
+
+                    display: block
+                    animation: fadeIn var(--fast) forwards
+                .readMore
+                    transform: translateY(0)
+                    top: 8px
+        img
+            width: 100%
+            aspect-ratio: 1/1
+            padding: 8px
+        .bottom-half
+            transition: height var(--fast)
+            width: 100%
+            height: 140px
+            @extend %F-center
+            flex-flow: column
+            position: absolute
+            bottom: 0
+            left: 0
+            background-color: var(--blue-dark-80)
+            padding: 16px 8px
+            color: white
+            p
+                line-height: 1.6
+                display: none
+                opacity: 0
+            .readMore
+                transition: top var(--fast) , transform var(--fast)
+                position: absolute
+                right: 12px
+                top: 0
+                transform: translateY(-50%)
+                white-space: nowrap
+                display: inline-block
+                background-image: var(--red-gradiant)
+                padding: 10px 24px
+                font-family: var(--cairo)
+                color: white
+                font-weight: 700
+                border-radius: 100px
+                box-shadow: var(--4db-Umbra) , var(--4db-penumbra)
+                &:hover
+                    background: var(--blue-dark)
+                    box-shadow: 0px 4px 5px rgba(105, 105, 105, 0.12), 0 2px 4px rgba(105, 105, 105, 0.14)
+@media (max-width:800px)
+    .s4 svg
+        transform: scaleY(2.2)
+.cards-2
+    margin-top: 64px
+    flex-flow: row nowrap
+    column-gap: 20px
+    color: white
+    @extend %F-around
+    .card-2
+        font-family: var(--cairo)
+        span
+            font-family: var(--display)
+            font-weight: 700
+            font-size: 32px
+        h3
+            font-weight: 400
+            font-size: 18px
+            @extend %F-around
+            flex-flow: column nowrap
+.s4
+    padding-top: 244px
+    padding-bottom: 65px
+    background-image: url('../tools/images/home/curve.svg')
+    position: relative
+    text-align: center
+    background-size: cover
+    background-position: center bottom
+    background-repeat: no-repeat
+    h2
+        color: white
+        margin-top: 0
+        font-size: 23px
+    svg
+        height: fit-content
+        position: absolute
+        top: -70px
+        left: -20vw
+        width: 140vw
+        z-index: -1
+
+@media (min-width:700px)
+    section.s4
+        padding-bottom: 140px
+        padding-top: 340px
+
+.s5
+    text-align: center
+    @extend %F-evenly
+    flex-flow: column nowrap
+    row-gap: 32px
+    .step
+        position: relative
+        transition: left 2s, opacity 2s
+        left: -100px
+        opacity: 0
+        @extend %F-around
+        flex-flow: column
+        max-width: min(500px , 95%)
+        h3
+            margin-block: 16px
+            font-family: var(--display)
+            font-weight: 700
+            font-size: 28px
+        p
+            margin: 0
+            font-family: var(--cairo)
+            font-size: 22px
+        .svg-ico
+            background-color: #FBE1E4
+            padding: 12px
+            border-radius: 16px
+            height: 80px
+            width: 80px
+            flex-flow: column nowrap
+
+
+@keyframes upDown
+    from
+        transform: translateY(0px)
+    30%
+        transform: translateY(-10px)
+    60%
+        transform: translateY(10px)
+    to
+        transform: translateY(0)
+
+.cards-0 .act , .act .cards-1 .card-1
+    animation: swip 1s forwards
+@keyframes swip
+    to
+        transform: translateX(0)
+        opacity: 1
+main .s5 div.act
+    left: 0
+    opacity: 1

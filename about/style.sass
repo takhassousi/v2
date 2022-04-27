@@ -1,0 +1,148 @@
+@use "../tools/sass/_position" as *
+@use "../tools/sass/_header" as *
+@use "../tools/sass/_footer" as *
+:root
+    --nav-f-s: 14px
+    --nav-c-g: 24px
+body
+    min-height: 100vh
+    background: url("../tools/images/forAll/banner.png") no-repeat 37% -190px
+header
+    .fa-bars
+        color: white
+    @media (min-width:750px)
+        .menu #navList a:hover
+            color: white
+        .menu> #navList  li a,.menu> #navList  li.act a
+            color: white
+h1
+    color: white
+    font-size: 44px
+    font-family: var(--display)
+    text-align: center
+    margin-bottom: 100px
+.s-txt
+    opacity: 0
+    position: relative
+    bottom: -30px
+    text-align: right
+    width: 100%
+.subtitle-sp
+    display: block
+    font-family: var(--cairo)
+    font-size: 19px
+    color: var(--glo)
+
+.underLine
+    position: relative
+    font-family: var(--display)
+    font-weight: 700
+    font-size: 25px
+    margin-block: 16px 32px
+    &:after,&::before
+        content: ""
+        border-radius: 20px
+        position: absolute
+        bottom: -32px
+        height: 5px
+    &:after
+        right: 0
+        width: 24px
+        background: transparent linear-gradient(180deg,hsl(356.8, 92.6%, 68.2%) 0%,hsl(339.5, 67.3%, 38.4%) 100%)
+    &:before
+        right: 32px
+        width: 55px
+        background-color: #dbdbdb
+.sub-p
+    padding-top: 32px
+    font-family: var(--cairo)
+    font-size: 20px
+    line-height: 34px
+    text-align: justify
+    direction: rtl
+    color: #787878
+section.act , section .act
+    animation: fadeIn forwards 2s .1s
+@media (min-width: 750px)
+    body header .menu #navList a:hover, body header .menu #navList .act a
+        border-bottom-color: white
+.s1,.s2
+    margin-bottom: 64px
+    @extend %F-between
+    column-gap: 20px
+    figure
+        opacity: 0
+        position: relative
+        left: -60px
+        width: 70%
+        min-width: 300px
+        img
+            width: 100%
+@media (max-width:750px)
+    .s1
+        flex-flow: column nowrap
+    .s2
+        flex-flow: column-reverse
+        figure
+            width: 100%
+.simple
+    direction: rtl
+    padding-top: 16px
+    li
+        font-family: var(--cairo)
+        margin-block: 16px
+        &::before
+            content: "\2022"
+            color: var(--primary)
+            font-weight: bold
+            display: inline-block
+            width: 1em
+            margin-right: -1em
+            font-size: 22px
+            font-family: sans-serif
+
+.cards
+    text-align: center
+    padding-block: 32px
+    .card
+        opacity: 0
+        position: relative
+        left: -60px
+        border-radius: 16px
+        box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.08) ,0px 3px 5px rgba(0, 0, 0, 0.14)
+        padding: 16px
+
+        aspect-ratio: 3/5
+        @extend %F-between
+        flex-flow: column nowrap
+        span
+            font-family: var(--display)
+            font-weight: 900
+            font-size: 30px
+            margin-block: 0
+        h3
+            color: #777
+            font-weight: 500
+            margin-block: 0
+            font-family: var(--cairo)
+    img
+        width: 100%
+    @include carts(300px, 170px, 16px, 16px)
+
+@media (max-width:389px)
+    section .cards
+        display: flex
+        flex-flow: column
+        row-gap: 16px
+        width: 100%
+        .card
+            aspect-ratio: 5/7
+            margin-inline: auto
+            width: max(80%,220px)
+
+@keyframes fadeIn
+    to
+        opacity: 1
+        bottom: 0
+        left: 0
+

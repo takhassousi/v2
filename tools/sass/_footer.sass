@@ -1,0 +1,42 @@
+@use './_position' as *
+footer
+    position: relative
+    background-image: url('../tools/images/home/footer.svg')
+    height: calc( 300px + 9vw )
+    margin-top: 200px
+    padding-bottom: 50px
+    padding-top: 32px
+    .container
+        height: 100%
+    .wrapper
+        height: 100%
+        @extend %F-around
+        column-gap: 40px
+        flex-flow: row wrap
+    #cp
+        padding: 16px
+        text-align: center
+        width: 100%
+        border-top: 2px #0004 solid
+        position: absolute
+        bottom: 0
+        left: 0
+        color: #aaa
+    svg
+        width: 40%
+        min-width: 200px
+    .socialMedia
+        min-width: fit-content
+        font-size: 24px
+        i
+            cursor: pointer
+            height: 48px
+            width: 48px
+            box-shadow: var(--4db-Umbra) , var(--4db-penumbra)
+            line-height: 50px
+            text-align: center
+            color: white
+            border-radius: 50%
+            background-image: var(--red-gradiant)
+            &:hover
+                background: var(--blue-dark)

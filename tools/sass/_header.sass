@@ -1,0 +1,171 @@
+@use './_position' as *
+
+header
+    box-shadow: var(--4db-penumbra)
+    ul li ul
+        transition: height 1s,opacity 1s
+        overflow: hidden
+        width: fit-content
+        height: 0
+        opacity: 0
+    .container
+        height: 56px
+        @extend %F-between
+        .menu ul li ul.act
+            height: var(--h)
+            opacity: 1
+        >a
+            font-size: 0
+    svg
+        max-height: 50px
+    i
+        font-size: 32px
+        cursor: pointer
+        &.fa-caret-down
+            transition: var(--fast)
+            font-size: 24px
+    .menu
+        text-align: center
+    .menu #navList
+        display: flex
+        text-align: center
+        row-gap: 16px
+        font-size: 24px
+        font-family: var(--cairo)
+        font-weight: 700
+        li a
+            white-space: nowrap
+        >.act a,a:hover , #sps a:hover
+            color: var(--primary)
+        #sps a
+            color: black
+            white-space: nowrap
+    .search
+        margin-inline: 8px
+        background: #E1EEF5
+        border: 1px solid #AAAAAA
+        position: relative
+        height: 40px
+        min-width: 156px
+        border-radius: 50px
+        padding-inline: 32px 8px
+        [type="submit"]
+            position: absolute
+            top: 7px
+            left: 8px
+            border: none
+            background: transparent
+            cursor: pointer
+            i
+                color: var(--primary)
+                font-size: 20px
+        [type="search"]
+            outline: none
+            direction: rtl
+            font-size: 14px
+            font-family: var(--tajawal)
+            border: none
+            height: 100%
+            width: 100%
+            background: transparent
+
+@media (max-width:749px)
+    header .menu
+        z-index: 3
+        opacity: 0
+        animation: fadeIn forwards var(--fast)
+        display: none
+        justify-content: center
+        align-items: center
+        flex-flow: column
+        width: 100%
+        height: 100vh
+        position: fixed
+        top: 0
+        left: 0
+        background: white
+        row-gap: 30px
+        #navList
+            flex-flow: column nowrap
+            padding-bottom: 40px
+            a
+                transition: color var(--fast)
+                color: var(--blue-dark)
+        .fa-xmark
+            font-size: 40px
+            height: 56px
+            width: 56px
+            text-align: center
+            line-height: 52px
+            border-radius: 50%
+            border: var(--blue-dark) 2px solid
+            color: var(--blue-dark)
+
+@media (min-width:750px)
+    header
+        .fa-xmark,.fa-bars
+            display: none
+        .menu
+            display: block
+            #navList
+                column-gap: var(--nav-c-g)
+                flex-flow: row nowrap
+                font-size: var(--nav-f-s)
+                >li
+                    position: relative
+                #sps
+                    background-color: white
+                    box-shadow: var(--4db-penumbra) ,var(--4db-Umbra)
+                    z-index: 2
+                    position: absolute
+                    top: 100%
+                    left: 50%
+                    transform: translateX(-50%)
+                    border-top: 1px #eee solid
+                    border-radius: 0 0 12px 12px
+                    li
+                        padding-inline: 16px
+                a
+                    transition: color var(--fast)
+                    color: var(--blue-dark)
+                    height: 56px
+                    display: inline-block
+                    line-height: 56px
+                    transition: border-color var(--fast)
+                    border-bottom: 3px solid transparent
+                    &:hover
+                        border-bottom-color: var(--primary)
+
+.logo-black
+    .tx-fr
+        fill: #333
+    .tx-ar
+        fill: black
+.logo-white
+    .tx-fr
+        fill: #eee
+    .tx-ar
+        fill: #fff
+footer .logo-white
+    width: 30%
+
+@keyframes fadeIn
+    to
+        opacity: 1
+#hate
+    stroke: #000
+    transform-origin: 41% 27%
+    animation: rotate infinite 7s 1s both
+
+@keyframes rotate
+    from
+        transform: rotate(0)
+    10%
+        transform: rotate(-24deg)
+    25%
+        transform: rotate(14deg)
+    30%
+        transform: rotate(0)
+    to
+        transform: rotate(0)
+

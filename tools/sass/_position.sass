@@ -1,0 +1,157 @@
+:root
+    /* 1db */
+    --1db-ambient: 0 1px 3px rgba(0, 0, 0, 0.2)
+    --1db-penumbra: 0 2px 2px rgba(0, 0, 0, 0.12)
+    --1db-umbra: 0 0 2px rgba(0, 0, 0, 0.14)
+    /* 4db  */
+    --4db-penumbra: 0px 4px 5px rgba(0, 0, 0, 0.12)
+    --4db-Umbra: 0 2px 4px rgba(0, 0, 0, 0.14)
+    --cairo: 'Cairo', sans-serif
+    --display: 'Lemonada', cursive
+    --tajawal: 'Tajawal', sans-serif
+    --primary: #D61F34
+    --blue-dark: #243b64
+    --blue-dark-80: hsl(218, 87%, 17%,80%)
+    --gray-7: #777
+    --dark-red: #974964
+    --fast: .5s
+    --glo: hsl(356.4, 90.4%, 67.5%)
+    --red-shadow: 0 10px 35px 0 rgba(246,97,106,.5019607843137255)
+    --dblue-shadow: 0 10px 35px 0 rgba(36,59,100,.30196078431372547)
+    --red-gradiant: linear-gradient(180deg,hsl(356.8, 92.6%, 68.2%) 0%,hsl(339.5, 67.3%, 38.4%) 100%)
+
+    //      absolute tools
+%A-center
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+
+%A-center-Y
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+
+%A-center-X
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+
+//      Flex Tools
+%F-center
+    display: flex
+    justify-content: center
+    align-items: center
+
+%F-between
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+%F-evenly
+    display: flex
+    align-items: center
+    justify-content: space-evenly
+
+%F-around
+    display: flex
+    align-items: center
+    justify-content: space-around
+
+//      Hover tools
+%hover-1
+    filter: saturate(1.2)
+    transform: scale(1.07)
+
+//      Random Tools
+@mixin C-Text($h)
+    height: $h
+    line-height: $h
+
+@mixin circleT($r)
+    @include C-Text($r)
+    text-align: center
+    width: $r
+    height: $r
+    border-radius: 50%
+
+@mixin squareT($h, $r)
+    @include C-Text($h)
+    text-align: center
+    width: $h
+    border-radius: $r
+
+@mixin circle($r)
+    width: $r
+    height: $r
+    border-radius: 50%
+
+@mixin square($h, $r)
+    height: $h
+    width: $h
+    border-radius: $r
+
+%Fill-screen
+    width: 100vw
+    height: 100vh
+    position: absolute
+    top: 0
+    left: 0
+
+%Fill-container
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+
+%Center-Fixed
+    position: fixed
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+%Center-Fixed-Y
+    position: fixed
+    top: 50%
+    transform: translateY(-50%)
+
+//          Grid tools
+@mixin carts($minR, $minC, $gapR, $gapC)
+    grid: repeat(auto-fit, minmax($minR, 1fr)) / repeat( auto-fit, minmax($minC, 1fr))
+    display: grid
+    row-gap: $gapR
+    column-gap: $gapC
+
+//      Container
+.container
+    @media (max-width: 599px)
+        margin-inline: 16px
+    @media (min-width: 600px) and (max-width: 904px)
+        margin-inline: 32px
+    @media (min-width: 905px) and (max-width: 1239px)
+        width: 840px
+        margin-inline: auto
+    @media (min-width: 1240px) and (max-width: 1439px)
+        margin-inline: 200px
+    @media (min-width: 1440px)
+        width: 1040px
+        margin-inline: auto
+
+// Reset 
+*
+    box-sizing: border-box
+html,body
+    overflow-x: hidden
+    max-width: 100vw
+    margin: 0
+    padding: 0
+    scroll-behavior: smooth
+ul
+    padding: 0
+    margin: 0
+    list-style: none
+a
+    text-decoration: none
+    color: black
+figure
+    margin: 0
