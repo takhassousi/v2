@@ -36,8 +36,7 @@ closeMenu.onclick = () => menuList.style.display = "none"
 
 // header functions End
 let done = false
-window.onscroll = () => {
-    watchMe.forEach(e => (e.getBoundingClientRect().top - window.innerHeight * .9 < 0) && e.classList.add("act"))
-}
+window.onscroll = () => watchMe.forEach(e => (e.getBoundingClientRect().top - window.innerHeight * .9 < 0) && e.classList.add("act"))
+
 listSps.onclick = () => sps.classList.toggle("act") ? listSps.firstChild.style.transform = "rotate(-180deg)" : listSps.firstChild.style.transform = "rotate(0deg)";
 window.scrollTo(0, 2)

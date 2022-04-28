@@ -16,13 +16,13 @@ body
         background-color: white
 main
     margin-top: 128px
-    flex-flow: row-reverse nowrap
+    flex-flow: row-reverse wrap
     align-items: flex-start
     @extend %F-between
     column-gap: 16px
 article
     position: relative
-    width: 70%
+    width: calc(100% - 296px)
     min-height: 100vh
     margin-bottom: 32px
     header
@@ -181,7 +181,7 @@ article
 aside
     box-shadow: var(--1db-ambient)
     background-color: white
-    width: 30%
+    width: 280px
     border-radius: 12px
     overflow: hidden
     padding: 16px 8px
@@ -197,7 +197,7 @@ aside
             left: 100%
     .s-title
         font-family: 'Cairo'
-        font-size: 22px
+        font-size: 18px
         position: relative
         &::before
             content: ""
@@ -255,11 +255,43 @@ aside
                 max-height: 64px
                 margin-bottom: 0
                 direction: rtl
-
-@media (max-width:1000px) 
+.rate
+    background-color: white
+    border-radius: 12px
+    box-shadow: var(--1db-ambient)
+    padding: 16px 8px
+    margin-top: 16px
+    >span
+        font-size: 20px
+        font-weight: 700
+        text-align: center
+        display: block
+    .faces
+        width: fit-content
+        margin-inline: auto
+        @extend %F-between
+        margin-block: 16px
+        column-gap: 16px
+        font-size: 32px
+        color: var(--blue-dark-80)
+        i
+            cursor: pointer
+            &:hover
+                color: var(--rateColor)
+    .fa-heart
+        color: var(--primary)
+        font-size: 48px
+        display: none
+        text-align: center
+        animation: fadeIn_Up 1s .8s forwards
+        opacity: 0
+        bottom: -16px
+        position: relative
+        margin-block: 8px
+@media (max-width:850px)
     body main
         flex-flow: column nowrap
-        article,aside
+        article,aside,.comments
             width: 100%
         aside .icons
             margin-block: 4px
@@ -269,3 +301,43 @@ aside
             width: 100vw
         aside .card img
             height: 96px
+
+@keyframes fadeIn_Up
+    from
+        opacity: 0
+        bottom: -16px
+    to
+        opacity: 1
+        bottom: 0
+
+.comments
+    background-color: white
+    padding: 8px
+    border-radius: 12px
+    box-shadow: var(--1db-ambient)
+    margin-top: 16px
+    width: calc(100% - 296px)
+    .h3
+        font-family: var(--cairo)
+        font-size: 22px
+        font-weight: 700
+        display: block
+        padding: 0 8px 8px
+        border-bottom: 1px solid #aaa
+    .user
+        padding-block: 4px  
+        display: flex
+        flex-flow: row
+        width: 100%
+        column-gap: 16px
+        direction: rtl
+        align-items: center
+        .fa-user-circle
+            font-size: 64px
+        .userName
+            font-size: 18px
+            font-weight: 600
+            display: block
+        time
+            color: #888
+            font-size: 14px

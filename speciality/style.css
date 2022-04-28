@@ -32,7 +32,7 @@
   transform: translateY(-50%);
 }
 
-main, header.top .container {
+main, .rate .faces, header.top .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -414,7 +414,7 @@ body header.top {
 
 main {
   margin-top: 128px;
-  flex-flow: row-reverse nowrap;
+  flex-flow: row-reverse wrap;
   align-items: flex-start;
   -moz-column-gap: 16px;
        column-gap: 16px;
@@ -422,7 +422,7 @@ main {
 
 article {
   position: relative;
-  width: 70%;
+  width: calc(100% - 296px);
   min-height: 100vh;
   margin-bottom: 32px;
 }
@@ -631,7 +631,7 @@ article .path a {
 aside {
   box-shadow: var(--1db-ambient);
   background-color: white;
-  width: 30%;
+  width: 280px;
   border-radius: 12px;
   overflow: hidden;
   padding: 16px 8px;
@@ -652,7 +652,7 @@ aside .title-a-l::before {
 }
 aside .s-title {
   font-family: "Cairo";
-  font-size: 22px;
+  font-size: 18px;
   position: relative;
 }
 aside .s-title::before {
@@ -722,11 +722,54 @@ aside .card .card-txt p {
   direction: rtl;
 }
 
-@media (max-width: 1000px) {
+.rate {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: var(--1db-ambient);
+  padding: 16px 8px;
+  margin-top: 16px;
+}
+.rate > span {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  display: block;
+}
+.rate .faces {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-inline: auto;
+  margin-block: 16px;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  font-size: 32px;
+  color: var(--blue-dark-80);
+}
+.rate .faces i {
+  cursor: pointer;
+}
+.rate .faces i:hover {
+  color: var(--rateColor);
+}
+.rate .fa-heart {
+  color: var(--primary);
+  font-size: 48px;
+  display: none;
+  text-align: center;
+  -webkit-animation: fadeIn_Up 1s 0.8s forwards;
+          animation: fadeIn_Up 1s 0.8s forwards;
+  opacity: 0;
+  bottom: -16px;
+  position: relative;
+  margin-block: 8px;
+}
+
+@media (max-width: 850px) {
   body main {
     flex-flow: column nowrap;
   }
-  body main article, body main aside {
+  body main article, body main aside, body main .comments {
     width: 100%;
   }
   body main aside .icons {
@@ -741,4 +784,62 @@ aside .card .card-txt p {
   body main aside .card img {
     height: 96px;
   }
+}
+@-webkit-keyframes fadeIn_Up {
+  from {
+    opacity: 0;
+    bottom: -16px;
+  }
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+@keyframes fadeIn_Up {
+  from {
+    opacity: 0;
+    bottom: -16px;
+  }
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+.comments {
+  background-color: white;
+  padding: 8px;
+  border-radius: 12px;
+  box-shadow: var(--1db-ambient);
+  margin-top: 16px;
+  width: calc(100% - 296px);
+}
+.comments .h3 {
+  font-family: var(--cairo);
+  font-size: 22px;
+  font-weight: 700;
+  display: block;
+  padding: 0 8px 8px;
+  border-bottom: 1px solid #aaa;
+}
+.comments .user {
+  padding-block: 4px;
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  direction: rtl;
+  align-items: center;
+}
+.comments .user .fa-user-circle {
+  font-size: 64px;
+}
+.comments .user .userName {
+  font-size: 18px;
+  font-weight: 600;
+  display: block;
+}
+.comments .user time {
+  color: #888;
+  font-size: 14px;
 }/*# sourceMappingURL=style.css.map */
