@@ -24,7 +24,7 @@ article
     position: relative
     width: calc(100% - 296px)
     min-height: 100vh
-    margin-bottom: 32px
+    margin-bottom: 16px
     header
         box-shadow: var(--1db-ambient)
         padding: 32px 16px
@@ -134,12 +134,7 @@ article
         width: 1300px
         margin-inline: auto
 .content
-    box-shadow: var(--1db-ambient)
-    direction: rtl
-    margin-top: 16px
-    background-color: white
-    padding: 16px
-    border-radius: 12px
+    @extend %block
     h2
         margin-block: 16px
     table
@@ -179,12 +174,9 @@ article
             font-weight: 600
 
 aside
-    box-shadow: var(--1db-ambient)
-    background-color: white
+    @extend %block
     width: 280px
-    border-radius: 12px
     overflow: hidden
-    padding: 16px 8px
     .title-a-r
         padding-left: 4px
         &::before
@@ -256,11 +248,7 @@ aside
                 margin-bottom: 0
                 direction: rtl
 .rate
-    background-color: white
-    border-radius: 12px
-    box-shadow: var(--1db-ambient)
-    padding: 16px 8px
-    margin-top: 16px
+    @extend %block
     >span
         font-size: 20px
         font-weight: 700
@@ -291,7 +279,7 @@ aside
 @media (max-width:850px)
     body main
         flex-flow: column nowrap
-        article,aside,.comments
+        article,aside,.comments,.commentInput
             width: 100%
         aside .icons
             margin-block: 4px
@@ -310,34 +298,75 @@ aside
         opacity: 1
         bottom: 0
 
+.h3
+    font-family: var(--cairo)
+    font-size: 22px
+    font-weight: 700
+    display: block
+    padding: 0 8px 8px
+    margin-bottom: 16px
+    border-bottom: 1px solid #aaa
+.fa-user-circle
+    color: var(--dark-red)
+    font-size: 48px
 .comments
-    background-color: white
-    padding: 8px
-    border-radius: 12px
-    box-shadow: var(--1db-ambient)
-    margin-top: 16px
+    @extend %block
     width: calc(100% - 296px)
-    .h3
-        font-family: var(--cairo)
-        font-size: 22px
-        font-weight: 700
-        display: block
-        padding: 0 8px 8px
-        border-bottom: 1px solid #aaa
     .user
-        padding-block: 4px  
         display: flex
         flex-flow: row
         width: 100%
         column-gap: 16px
         direction: rtl
         align-items: center
-        .fa-user-circle
-            font-size: 64px
+
         .userName
-            font-size: 18px
+            font-size: 16px
             font-weight: 600
             display: block
         time
             color: #888
-            font-size: 14px
+            font-size: 12px
+    .comment
+        padding-bottom: 8px
+        margin-bottom: 16px
+        border-bottom: 1px #bbb9 solid
+        button
+            @extend %btnForm
+        p
+            margin-block: 8px
+%block
+    background-color: white
+    border-radius: 12px
+    box-shadow: var(--1db-ambient)
+    padding: 16px 8px
+    margin-block: 8px
+    direction: rtl
+
+.commentInput
+    width: calc(100% - 296px)
+    @extend %block
+    button
+        @extend %btnForm
+        margin-top: 16px
+        float: left
+    .field
+        display: flex
+        flex-flow: row nowrap
+        column-gap: 16px
+        textarea
+            width: 100%
+        i
+            font-size: 48px
+%btnForm
+    cursor: pointer
+    box-shadow: var(--1db-ambient) ,var(--1db-penumbra)
+    border: none
+    background-color: var(--blue-dark)
+    padding: 8px 16px
+    font-size: 16px
+    border-radius: 8px
+    margin-inline: 16px
+    color: white
+    &:hover
+        background-color: var(--blue-dark-80)

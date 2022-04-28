@@ -148,6 +148,7 @@ header.top .menu #navList #sps a {
   white-space: nowrap;
 }
 header.top .search {
+  line-height: 40px;
   margin-inline: 8px;
   background: #E1EEF5;
   border: 1px solid #AAAAAA;
@@ -171,8 +172,8 @@ header.top .search [type=submit] i {
 }
 header.top .search [type=search] {
   outline: none;
-  direction: rtl;
   font-size: 14px;
+  text-align: right;
   font-family: var(--tajawal);
   border: none;
   height: 100%;

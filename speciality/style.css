@@ -160,6 +160,7 @@ header.top .menu #navList #sps a {
   white-space: nowrap;
 }
 header.top .search {
+  line-height: 40px;
   margin-inline: 8px;
   background: #E1EEF5;
   border: 1px solid #AAAAAA;
@@ -183,8 +184,8 @@ header.top .search [type=submit] i {
 }
 header.top .search [type=search] {
   outline: none;
-  direction: rtl;
   font-size: 14px;
+  text-align: right;
   font-family: var(--tajawal);
   border: none;
   height: 100%;
@@ -424,7 +425,7 @@ article {
   position: relative;
   width: calc(100% - 296px);
   min-height: 100vh;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 }
 article header {
   box-shadow: var(--1db-ambient);
@@ -569,14 +570,6 @@ article .path a {
   }
 }
 
-.content {
-  box-shadow: var(--1db-ambient);
-  direction: rtl;
-  margin-top: 16px;
-  background-color: white;
-  padding: 16px;
-  border-radius: 12px;
-}
 .content h2 {
   margin-block: 16px;
 }
@@ -629,12 +622,8 @@ article .path a {
 }
 
 aside {
-  box-shadow: var(--1db-ambient);
-  background-color: white;
   width: 280px;
-  border-radius: 12px;
   overflow: hidden;
-  padding: 16px 8px;
 }
 aside .title-a-r {
   padding-left: 4px;
@@ -722,13 +711,6 @@ aside .card .card-txt p {
   direction: rtl;
 }
 
-.rate {
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: var(--1db-ambient);
-  padding: 16px 8px;
-  margin-top: 16px;
-}
 .rate > span {
   font-size: 20px;
   font-weight: 700;
@@ -769,7 +751,7 @@ aside .card .card-txt p {
   body main {
     flex-flow: column nowrap;
   }
-  body main article, body main aside, body main .comments {
+  body main article, body main aside, body main .comments, body main .commentInput {
     width: 100%;
   }
   body main aside .icons {
@@ -805,24 +787,25 @@ aside .card .card-txt p {
     bottom: 0;
   }
 }
-.comments {
-  background-color: white;
-  padding: 8px;
-  border-radius: 12px;
-  box-shadow: var(--1db-ambient);
-  margin-top: 16px;
-  width: calc(100% - 296px);
-}
-.comments .h3 {
+.h3 {
   font-family: var(--cairo);
   font-size: 22px;
   font-weight: 700;
   display: block;
   padding: 0 8px 8px;
+  margin-bottom: 16px;
   border-bottom: 1px solid #aaa;
 }
+
+.fa-user-circle {
+  color: var(--dark-red);
+  font-size: 48px;
+}
+
+.comments {
+  width: calc(100% - 296px);
+}
 .comments .user {
-  padding-block: 4px;
   display: flex;
   flex-flow: row;
   width: 100%;
@@ -831,15 +814,64 @@ aside .card .card-txt p {
   direction: rtl;
   align-items: center;
 }
-.comments .user .fa-user-circle {
-  font-size: 64px;
-}
 .comments .user .userName {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   display: block;
 }
 .comments .user time {
   color: #888;
-  font-size: 14px;
+  font-size: 12px;
+}
+.comments .comment {
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+  border-bottom: 1px rgba(187, 187, 187, 0.6) solid;
+}
+.comments .comment p {
+  margin-block: 8px;
+}
+
+.commentInput, .content, aside, .rate, .comments {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: var(--1db-ambient);
+  padding: 16px 8px;
+  margin-block: 8px;
+  direction: rtl;
+}
+
+.commentInput {
+  width: calc(100% - 296px);
+}
+.commentInput button {
+  margin-top: 16px;
+  float: left;
+}
+.commentInput .field {
+  display: flex;
+  flex-flow: row nowrap;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+.commentInput .field textarea {
+  width: 100%;
+}
+.commentInput .field i {
+  font-size: 48px;
+}
+
+.comments .comment button, .commentInput button {
+  cursor: pointer;
+  box-shadow: var(--1db-ambient), var(--1db-penumbra);
+  border: none;
+  background-color: var(--blue-dark);
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  margin-inline: 16px;
+  color: white;
+}
+.comments .comment button:hover, .commentInput button:hover {
+  background-color: var(--blue-dark-80);
 }/*# sourceMappingURL=style.css.map */
