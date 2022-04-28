@@ -19,6 +19,7 @@
   --blue-dark-80: hsl(218, 87%, 17%,80%);
   --gray-7: #777;
   --dark-red: #974964;
+  --good-green: #0f9d58;
   --fast: .5s;
   --glo: hsl(356.4, 90.4%, 67.5%);
   --red-shadow: 0 10px 35px 0 rgba(246,97,106,.5019607843137255);
@@ -26,10 +27,16 @@
   --red-gradiant: linear-gradient(180deg,hsl(356.8, 92.6%, 68.2%) 0%,hsl(339.5, 67.3%, 38.4%) 100%);
 }
 
-.content ul li:before, aside .s-title::before {
+.content ul li:before, aside .s-title::before, .account form .inputs div i {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.account .choose {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main, .rate .faces, header.top .container {
@@ -48,6 +55,13 @@ footer .wrapper {
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+
+.account {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @media (max-width: 599px) {
@@ -828,11 +842,18 @@ aside .card .card-txt p {
   margin-bottom: 16px;
   border-bottom: 1px rgba(187, 187, 187, 0.6) solid;
 }
+.comments .comment .pending {
+  display: block;
+  font-style: italic;
+}
+.comments .comment .comment {
+  padding-right: 32px;
+}
 .comments .comment p {
   margin-block: 8px;
 }
 
-.commentInput, .content, aside, .rate, .comments {
+.account, .commentInput, .content, aside, .rate, .comments {
   background-color: white;
   border-radius: 12px;
   box-shadow: var(--1db-ambient);
@@ -842,9 +863,10 @@ aside .card .card-txt p {
 }
 
 .commentInput {
+  position: relative;
   width: calc(100% - 296px);
 }
-.commentInput button {
+.commentInput [type=submit] {
   margin-top: 16px;
   float: left;
 }
@@ -861,7 +883,7 @@ aside .card .card-txt p {
   font-size: 48px;
 }
 
-.comments .comment button, .commentInput button {
+.comments .comment button, .commentInput [type=submit] {
   cursor: pointer;
   box-shadow: var(--1db-ambient), var(--1db-penumbra);
   border: none;
@@ -872,6 +894,87 @@ aside .card .card-txt p {
   margin-inline: 16px;
   color: white;
 }
-.comments .comment button:hover, .commentInput button:hover {
+.comments .comment button:hover, .commentInput [type=submit]:hover {
   background-color: var(--blue-dark-80);
+}
+
+.commentInput .cancelR {
+  display: none;
+  position: absolute;
+  top: 29px;
+  left: 16px;
+  color: var(--primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.account {
+  width: 360px;
+  max-width: calc(100% - 32px);
+  box-shadow: 0 0 0 max(200vh, 200vw) rgba(0, 0, 0, 0.3);
+  background-color: #eee;
+}
+.account .fa-xmark {
+  top: 8px;
+  right: 8px;
+  font-size: 18px;
+  color: rgba(119, 119, 119, 0.6666666667);
+  cursor: pointer;
+  position: absolute;
+}
+.account .loginTitle {
+  font-size: 22px;
+  font-weight: 700;
+  display: block;
+  text-align: center;
+  margin-block: 8px;
+}
+.account form {
+  border: 1px solid #ddd;
+  outline: 16px white solid;
+  margin-inline: 16px;
+  margin: 40px 24px;
+  background-color: white;
+}
+.account form .inputs {
+  padding: 16px;
+}
+.account form .inputs div {
+  position: relative;
+}
+.account form .inputs div i {
+  left: 16px;
+  color: #999;
+  font-size: 20px;
+}
+.account form input {
+  width: 100%;
+  margin-block: 8px;
+  font-size: 18px;
+  padding: 8px;
+}
+.account .choose > span {
+  white-space: nowrap;
+  cursor: pointer;
+  display: block;
+  padding-block: 8px;
+  height: 100%;
+  font-size: 18px;
+  width: 50%;
+  text-align: center;
+  background-color: #ddd;
+}
+@media (max-width: 360px) {
+  .account .choose > span {
+    font-size: 16px;
+  }
+}
+.account .choose > span.act {
+  background-color: white;
+  border-top: 2px #0f9d58 solid;
+}
+.account .choose > span:hover {
+  background-color: #f5f5f5;
 }/*# sourceMappingURL=style.css.map */

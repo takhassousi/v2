@@ -331,6 +331,12 @@ aside
         padding-bottom: 8px
         margin-bottom: 16px
         border-bottom: 1px #bbb9 solid
+        .pending
+            display: block
+            font-style: italic
+        .comment
+            padding-right: 32px
+
         button
             @extend %btnForm
         p
@@ -344,9 +350,10 @@ aside
     direction: rtl
 
 .commentInput
+    position: relative
     width: calc(100% - 296px)
     @extend %block
-    button
+    [type="submit"]
         @extend %btnForm
         margin-top: 16px
         float: left
@@ -370,3 +377,73 @@ aside
     color: white
     &:hover
         background-color: var(--blue-dark-80)
+.commentInput .cancelR
+    display: none
+    position: absolute
+    top: 29px
+    left: 16px
+    color: var(--primary)
+    background: none
+    border: none
+    cursor: pointer
+    font-size: 16px
+
+.account
+    width: 360px
+    max-width: calc( 100% - 32px  )
+    box-shadow: 0 0 0 max(200vh,200vw) rgba(0,0,0,.3 )
+    @extend %Center-Fixed
+    @extend %block
+    background-color: #eee
+    .fa-xmark
+        top: 8px
+        right: 8px
+        font-size: 18px
+        color: #777a
+        cursor: pointer
+        position: absolute
+    .loginTitle
+        font-size: 22px
+        font-weight: 700
+        display: block
+        text-align: center
+        margin-block: 8px
+    form
+        border: 1px solid #ddd
+        outline: 16px white solid
+        margin-inline: 16px
+        margin: 40px 24px
+        background-color: white
+        .inputs
+            padding: 16px
+            div
+                position: relative
+                i
+                    @extend %A-center-Y
+                    left: 16px
+                    color: #999
+                    font-size: 20px
+        input
+            width: 100%
+            margin-block: 8px
+            font-size: 18px
+            padding:  8px
+    .choose
+        @extend %F-center
+        >span
+            white-space: nowrap
+            cursor: pointer
+            display: block
+            padding-block: 8px 
+            height: 100%
+            font-size: 18px
+            width: 50%
+            text-align: center
+            background-color: #ddd
+            @media (max-width:360px) 
+                font-size: 16px    
+            &.act
+                background-color: white
+                border-top: 2px #0f9d58 solid
+            &:hover
+                background-color: #f5f5f5

@@ -326,7 +326,7 @@
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam itaque distinctio asperiores officiis dicta temporibus reiciendis sit dignissimos fugiat veritatis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam itaque distinctio asperiores
                     officiis dicta temporibus reiciendis sit dignissimos fugiat veritatis.
                 </p>
-                <button>الرد</button>
+                <button class="rpl">الرد</button>
             </div>
             <div class="comment">
                 <div class="user">
@@ -340,7 +340,7 @@
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam itaque distinctio asperiores officiis dicta temporibus reiciendis sit dignissimos fugiat veritatis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam itaque distinctio asperiores
                     officiis dicta temporibus reiciendis sit dignissimos fugiat veritatis.
                 </p>
-                <button>الرد</button>
+                <button class="rpl">الرد</button>
             </div>
             <div class="comment">
                 <div class="user">
@@ -354,19 +354,50 @@
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam itaque distinctio asperiores officiis dicta temporibus reiciendis sit dignissimos fugiat veritatis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam itaque distinctio asperiores
                     officiis dicta temporibus reiciendis sit dignissimos fugiat veritatis.
                 </p>
-                <button>الرد</button>
+                <div class="comment">
+                    <div class="user">
+                        <i class="fas fa-user-circle"></i>
+                        <div class="txt">
+                            <span class="userName">إسم المستخدم</span>
+                            <time datetime="2018-07-07">2022-02-26 الساعة 18:55</time>
+                            <span class="pending">  تعليقك في انتظار المراجعة. هذه معاينة؛ سيكون تعليقك مرئيًا بعد الموافقة عليه.
+                            </span>
+                        </div>
+                    </div>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam itaque distinctio asperiores officiis dicta temporibus reiciendis sit dignissimos fugiat veritatis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam itaque distinctio asperiores
+                        officiis dicta temporibus reiciendis sit dignissimos fugiat veritatis.
+                    </p>
+
+                </div>
+                <button class="rpl">الرد</button>
             </div>
         </section>
         <form class="commentInput">
             <span class="h3">اترك تعليقاً</span>
+            <button class="cancelR">إلغاء الرد</button>
             <div class="field">
                 <i class="fas fa-user-circle"></i>
                 <textarea placeholder="أكتب تعليقك هنا" name="comment"></textarea>
             </div>
             <button type="submit">إرسال</button>
         </form>
-
     </main>
+    <div style="display: none;" class="account">
+        <span class="loginTitle">الرجاء تسجيل الدخول للتعليق</span>
+        <i class="fa-solid fa-xmark"></i>
+        <form action="">
+            <div class="choose">
+                <span class="act">تسجيل الدخول</span>
+                <span>إنشاء حساب</span>
+            </div>
+            <div class="inputs">
+                <div id="name" style="display: none"><i class="fa-solid fa-user"></i><input placeholder="الإسم" type="text" name="username"></div>
+                <div><i class="fa-solid fa-envelope"></i><input placeholder="الإيميل" name="email" type="email"></div>
+                <div><i class="fa-solid fa-lock"></i><input placeholder="كلمة السر" name="password" type="password"></div>
+            </div>
+        </form>
+    </div>
     <footer>
         <div class="container">
             <div class="wrapper">

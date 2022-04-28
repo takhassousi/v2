@@ -6,7 +6,14 @@ const menuBtn = document.querySelector("header i.fa-bars"),
     menuList = document.querySelector("header .menu"),
     watchMe = document.querySelectorAll(".watchMe"),
     listSps = document.getElementById("list-sps"),
+    cancelR = document.querySelector(".cancelR"),
+    CreatAccountForm = document.querySelector(".account form"),
+    nameDiv = document.getElementById("name"),
+    loginSwitch = document.querySelectorAll(".account .choose >span"),
+    reply = document.querySelectorAll(".rpl"),
+    cmnTitle = document.querySelector(".commentInput .h3"),
     rateTxt = document.querySelector(".rate >span"),
+    closeWin = document.querySelector(".account .fa-xmark"),
     sps = document.getElementById("sps"),
     faces = document.querySelectorAll(".faces i"),
     closeMenu = document.querySelector("header .menu .fa-xmark");
@@ -39,3 +46,31 @@ faces.forEach((e, i) => e.onclick = () => {
     faces[0].parentElement.remove()
     document.querySelector(".rate > .fa-heart").style.display = "block"
 })
+
+reply.forEach(e =>
+    e.onclick = () => {
+        cmnTitle.scrollIntoView({ block: "center" })
+        cancelR.style.display = "block"
+        const userName = e.parentElement.querySelector(".userName").textContent
+        cmnTitle.innerHTML = ` اترك رداً على <b class="replyTo">${userName}</b>`
+    })
+cancelR.onclick = (e) => {
+    e.preventDefault()
+    cancelR.style.display = "none"
+    cmnTitle.innerHTML = `اترك تعليقاً`
+}
+
+loginSwitch[0].onclick = () => {
+    console.log("hi");
+    loginSwitch[0].classList.add("act")
+    loginSwitch[1].classList.remove("act")
+    nameDiv.style.display = "none"
+}
+loginSwitch[1].onclick = () => {
+    nameDiv.style.display = "block"
+    loginSwitch[1].classList.add("act")
+    loginSwitch[0].classList.remove("act")
+}
+closeWin.onclick = () => {
+    closeWin.parentElement.style.display = "none"
+}
