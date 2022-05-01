@@ -68,6 +68,11 @@ footer .wrapper {
 
 * {
   box-sizing: border-box;
+  direction: rtl;
+}
+
+button {
+  cursor: pointer;
 }
 
 html, body {
@@ -103,7 +108,7 @@ header.top ul li ul {
   width: -moz-fit-content;
   width: fit-content;
   height: 0;
-  opacity: 0;
+  opacity: 0.3;
 }
 header.top .container {
   height: 56px;
@@ -114,6 +119,10 @@ header.top .container .menu ul li ul.act {
 }
 header.top .container > a {
   font-size: 0;
+}
+header.top img {
+  height: 50px;
+  width: 116px;
 }
 header.top svg {
   max-height: 50px;
@@ -275,7 +284,7 @@ header.top .search [type=search] {
   fill: #fff;
 }
 
-footer .logo-white {
+footer img {
   width: 30%;
 }
 
@@ -297,41 +306,6 @@ footer .logo-white {
           animation: rotate infinite 7s 1s both;
 }
 
-@-webkit-keyframes rotate {
-  from {
-    transform: rotate(0);
-  }
-  10% {
-    transform: rotate(-24deg);
-  }
-  25% {
-    transform: rotate(14deg);
-  }
-  30% {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(0);
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0);
-  }
-  10% {
-    transform: rotate(-24deg);
-  }
-  25% {
-    transform: rotate(14deg);
-  }
-  30% {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(0);
-  }
-}
 footer {
   position: relative;
   background-image: url("../tools/images/home/footer.svg");
@@ -360,7 +334,6 @@ footer #cp {
   color: #aaa;
 }
 footer svg {
-  width: 40%;
   min-width: 200px;
 }
 footer .socialMedia {

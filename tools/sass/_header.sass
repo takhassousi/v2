@@ -7,7 +7,7 @@ header.top
         overflow: hidden
         width: fit-content
         height: 0
-        opacity: 0
+        opacity: .3
     .container
         height: 56px
         @extend %F-between
@@ -16,6 +16,9 @@ header.top
             opacity: 1
         >a
             font-size: 0
+    img 
+        height: 50px
+        width: 116px
     svg
         max-height: 50px
     i
@@ -147,7 +150,7 @@ header.top
         fill: #eee
     .tx-ar
         fill: #fff
-footer .logo-white
+footer img
     width: 30%
 
 @keyframes fadeIn
@@ -158,14 +161,3 @@ footer .logo-white
     transform-origin: 41% 27%
     animation: rotate infinite 7s 1s both
 
-@keyframes rotate
-    from
-        transform: rotate(0)
-    10%
-        transform: rotate(-24deg)
-    25%
-        transform: rotate(14deg)
-    30%
-        transform: rotate(0)
-    to
-        transform: rotate(0)

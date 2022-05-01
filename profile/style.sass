@@ -1,0 +1,175 @@
+@use '../tools/sass/_position' as *
+@use '../tools/sass/_header' as *
+@use '../tools/sass/_footer' as *
+:root
+    --nav-f-s: 14px
+    --nav-c-g: 24px
+*
+    direction: ltr
+body
+    min-height: 100vh
+
+html body header.top .menu #navList #list-sps
+    padding-inline: 8px
+    &:hover
+        color: #0D652D
+        background-color: #E9F6ED
+        border-bottom-color: #0D652D
+        i.fa-plus
+            background-color: white
+    i.fa-plus
+        transition: background-color var(--fast)
+        font-size: 20px
+        height: 32px
+        width: 32px
+        border-radius: 50%
+        background-color: #E9F6ED
+        text-align: center
+        line-height: 32px
+        color: #0D652D
+
+.basics
+
+    @extend %F-between
+    margin-block: 32px
+    flex-flow: row nowrap
+    height: 100px
+    img
+        height: 100%
+    .order
+        height: 100%
+        position: relative
+        .h2
+            position: absolute
+            left: 50%
+            top: 20px
+            color: white
+            transform: translateX(-50%)
+    .prs
+        height: 100%
+        text-align: right
+        @extend %F-between
+        column-gap: 16px
+        flex-flow: row nowrap
+        .personalImg
+            position: relative
+            height: 100%
+            .fa-pen-to-square
+                position: absolute
+                top: -8px
+                cursor: pointer
+                right: -16px
+            img
+                box-shadow: var(--2db-ambient),var(--2db-penumbra) ,var(--2db-umbra)
+                border-radius: 50%
+                aspect-ratio: 1/1
+                background-size: cover
+.h2
+    text-align: right
+    font-size: 22px
+    margin-block: 8px
+    font-weight: 700
+    display: block
+.h9
+    font-size: 14px
+    color: #999
+.r1
+    height: 330px
+.row
+    margin-block: 64px 32px
+    @extend %F-between
+    column-gap: 16px
+    flex-flow: row
+    .col
+        height: 100%
+        font-size: 23px
+        width: 100%
+        text-align: center
+        flex-flow: column
+        @extend %F-between
+        row-gap: 16px
+        padding: 16px 8px
+        border-radius: 12px
+        border: 1px solid #eee
+        box-shadow: var(--2db-ambient) ,var(--2db-penumbra) ,var(--2db-umbra)
+        .circle
+            width: 200px
+            position: relative
+            span
+                @extend %A-center
+                font-size: 32px
+        .bds
+            height: 100%
+            width: 100%
+            .bd
+                display: flex
+                justify-content: space-evenly
+                background-color: rgba(255, 199, 12, 0.15)
+                box-shadow: var(--1db-ambient) , var(--1db-penumbra)
+                color: #FFC70C
+                padding: 16px
+                border-radius: 16px
+                font-size: 18px
+        .num
+            @extend %F-between
+            font-size: 12px
+            width: 100%
+        progress
+            width: 100%
+        .lvl
+            width: 100%
+.r2
+    height: 325px
+
+.underLine
+    position: relative
+    &:after,&::before
+        content: ""
+        border-radius: 20px
+        position: absolute
+        bottom: -32px
+        height: 5px
+    &:after
+        right: 0
+        width: 24px
+        background: transparent linear-gradient(180deg,hsl(356.8, 92.6%, 68.2%) 0%,hsl(339.5, 67.3%, 38.4%) 100%)
+    &:before
+        right: 32px
+        width: 55px
+        background-color: #dbdbdb
+
+.tableCon
+    margin-block: 64px 32px
+    th
+        border-block: 1px solid #333
+        padding-block: 16px
+        margin-bottom: 8px
+        i
+            margin-inline: 8px
+    table
+        width: 100%
+        border-spacing: 0px 8px
+    td
+        text-align: center
+        padding: 8px
+    tbody
+        border-spacing: 0px 20px
+        border-top: 8px red solid
+        td
+            border: 1px #999 solid
+            &:first-child
+                border-top-left-radius: 8px
+                border-bottom-left-radius: 8px
+            &:last-child
+                border-top-right-radius: 8px
+                border-bottom-right-radius: 8px
+        .fa-star
+            color: #ffc70c
+.t
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-end
+    align-items: center
+    column-gap: 8px
+thead .t
+    justify-content: center

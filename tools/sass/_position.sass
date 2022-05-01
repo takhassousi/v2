@@ -119,6 +119,10 @@
     position: fixed
     top: 50%
     transform: translateY(-50%)
+%Center-Sticky-Y
+    position: sticky
+    top: 50%
+    transform: translateY(-50%)
 
 //          Grid tools
 @mixin carts($minR, $minC, $gapR, $gapC)
@@ -145,6 +149,9 @@
 // Reset 
 *
     box-sizing: border-box
+    direction: rtl
+button
+    cursor: pointer
 html,body
     overflow-x: hidden
     max-width: 100vw

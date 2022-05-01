@@ -11,10 +11,12 @@ const menuBtn = document.querySelector("header i.fa-bars"),
     nameDiv = document.getElementById("name"),
     loginSwitch = document.querySelectorAll(".account .choose >span"),
     reply = document.querySelectorAll(".rpl"),
+    accountWin = document.querySelector(".account"),
     cmnTitle = document.querySelector(".commentInput .h3"),
     rateTxt = document.querySelector(".rate >span"),
     closeWin = document.querySelector(".account .fa-xmark"),
     sps = document.getElementById("sps"),
+    commentForm = document.querySelector(`form.commentInput`),
     faces = document.querySelectorAll(".faces i"),
     closeMenu = document.querySelector("header .menu .fa-xmark");
 menuBtn.onclick = () => {
@@ -22,8 +24,6 @@ menuBtn.onclick = () => {
     sps.setAttribute("style", `--h:${sps.children[0].offsetHeight*sps.childElementCount}px`);
 }
 setTimeout(() => sps.setAttribute("style", `--h:${sps.children[0].offsetHeight*sps.childElementCount +8}px`), 0);
-
-// header functions End
 
 window.onscroll = () => watchMe.forEach(e => (e.getBoundingClientRect().top - window.innerHeight * .7 < 0) && e.classList.add("act"))
 
@@ -49,6 +49,8 @@ faces.forEach((e, i) => e.onclick = () => {
 
 reply.forEach(e =>
     e.onclick = () => {
+        accountWin.style.display = "block"
+        document.documentElement.style.overflow = "hidden"
         cmnTitle.scrollIntoView({ block: "center" })
         cancelR.style.display = "block"
         const userName = e.parentElement.querySelector(".userName").textContent
@@ -65,12 +67,21 @@ loginSwitch[0].onclick = () => {
     loginSwitch[0].classList.add("act")
     loginSwitch[1].classList.remove("act")
     nameDiv.style.display = "none"
+    CreatAccountForm.submit.value = "الدخول"
 }
 loginSwitch[1].onclick = () => {
+    CreatAccountForm.submit.value = "إنشاء"
     nameDiv.style.display = "block"
     loginSwitch[1].classList.add("act")
     loginSwitch[0].classList.remove("act")
 }
 closeWin.onclick = () => {
+    document.documentElement.style.overflow = "unset"
     closeWin.parentElement.style.display = "none"
+}
+
+commentForm.onsubmit = (e) => {
+    e.preventDefault()
+    document.documentElement.style.overflow = "hidden"
+    accountWin.style.display = "block"
 }

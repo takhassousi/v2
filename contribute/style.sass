@@ -1,0 +1,174 @@
+@use "../tools/sass/_position" as *
+@use "../speciality/style.sass"
+*
+    direction: rtl
+.styleBtns
+    max-height: 90vh
+    z-index: 2
+    @extend %Center-Fixed-Y
+    right: 16px
+    display: flex
+    flex-flow: column nowrap
+    row-gap: 16px
+    @media (min-width:600px)
+.metaData
+    @extend %block
+    input
+        border: 1px solid #999
+    select,input
+        padding: 8px
+        border-radius: 8px
+    select
+        border: none
+        max-width: 30%
+    >.input
+        margin-block: 16px
+        @extend %F-between
+    .personality
+        margin-block: 16px
+        @include carts(20px, 200px, 8px, 8px)
+
+header
+    label
+        cursor: pointer
+        width: 100%
+        background-color: #eee
+        padding-block: 64px
+        text-align: center
+        border-radius: 12px
+        display: inline-block
+        &:hover
+            background-color: #e8e8e8
+    .fa-image
+        font-size: 128px
+i.fa-pen-to-square ,  i.fa-floppy-disk
+    display: block
+    margin: 12px 8px
+    cursor: pointer
+    font-size: 24px
+@media (min-width:700px)
+    .metaData
+        padding-inline: 48px
+.con
+    line-height: 1.6
+[contenteditable]
+    border: dotted 1px var(--primary)
+header
+    .con
+        color: #526D7A
+        font-size: 22px
+        line-height: 1.6
+        ol
+            list-style: decimal
+
+@media (max-width:1065px)
+    main.container2
+        padding-right: 32px
+.imageBox
+    z-index: 2
+    @extend %Center-Fixed
+    display: none
+    background-color: white
+    text-align: center
+    border-radius: 12px
+    padding: 16px 8px
+    box-shadow: var(--4db-penumbra) ,var(--4db-Umbra)
+    border: 1px #aaa solid
+    input
+        width: 100%
+        padding: 4px
+        border-radius: 8px
+    span
+        display: block
+    .t
+        text-align: center
+        font-size: 20px
+        margin-block: 16px 8px
+    .fa-xmark
+        cursor: pointer
+        position: absolute
+        top: 8px
+        right: 8px
+    label
+        text-align: center
+    button
+        display: block
+        background-color: var(--good-green)
+        border-radius: 50px
+        color: white
+        padding: 8px 16px
+        border: none
+        margin: 16px auto 4px
+    .fa-image
+        color: #222
+        transition: color var(--fast)
+        font-size: 48px
+        cursor: pointer
+        &:hover
+            color: #000
+
+figure .fa-xmark
+    cursor: pointer
+    font-size: 22px
+    margin-top: 16px
+
+.submitIt
+    @extend %block
+    button
+        padding: 8px 16px
+        background-color: var(--good-green)
+        color: white
+        border: none
+        border-radius: 50px
+        margin-inline: auto
+        display: block
+        font-size: 20px
+        &:hover
+            filter: saturate(1.2)
+
+.succeed
+    background-color: #E9F6ED
+    p ,.t-s
+        color: #0D652D
+    button
+        background-color: #0D652D
+.error
+    background-color: #FCE8E8
+    p ,.t-s
+        color: #A50E0E
+    button
+        background-color: #A50E0E
+.dialogue
+    display: none
+    text-align: center
+    @extend %Center-Fixed
+    padding: 24px 16px
+    border-radius: 12px
+    box-shadow: var(--4db-Umbra) , var(--4db-penumbra)
+    border: #ccc solid 1px
+    p
+        font-size: 18px
+    button
+        font-weight: 700
+        padding: 8px 16px
+        color: white
+        border: none
+        border-radius: 50px
+        font-size: 18px
+    .t-s
+        font-weight: 700
+        font-size: 20px
+
+html body .errorHighlight
+    border: 1px solid red !important
+
+.content .fa-plus
+    font-size: 64px
+    margin: 32px auto
+    display: block
+    text-align: center
+    cursor: pointer
+    background-color: #eee
+    border-radius: 12px
+    padding-block: 16px 
+    width: 50%

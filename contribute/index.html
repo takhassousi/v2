@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>takhassousi | تخصصي</title>
+    <link rel="stylesheet" link rel="preload" as="style" href="style.css" />
+    <link rel="stylesheet" link rel="preload" as="style" href="../tools/fontawesome/css/all.min.css" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#E44154" />
+    <meta name="color-theme" content="#E44154" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Lemonada:wght@400;600;700&family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet" />
+    <meta name="description" content="اكتشف التخصص المناسب لك لمسقبل واعد" />
+    <link rel="shortcut icon" href="../tools/iconified/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="../tools/iconified/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="../tools/iconified/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="../tools/iconified/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../tools/iconified/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="../tools/iconified/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="../tools/iconified/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="../tools/iconified/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="../tools/iconified/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../tools/iconified/apple-touch-icon-180x180.png" />
+</head>
+
+<body>
+    <header class="top">
+        <div class="container">
+            <i class="fa-solid fa-bars"></i>
+            <div class="menu">
+                <ul id="navList" dir="rtl">
+                    <li>
+                        <a href="./">الصفحة الرئيسية</a>
+                    </li>
+                    <li>
+                        <a href="#" id="list-sps"><i class="fa-solid fa-caret-down"></i>
+                                &nbsp;التخصصات</a
+                            >
+                            <ul id="sps">
+                                <li><a href="">التخصصات الهندسية</a></li>
+                    <li><a href="">التخصصات الطبية</a></li>
+                    <li><a href="">التخصصات العلمية</a></li>
+                    <li><a href="">التخصصات التكنولوجية</a></li>
+                    <li><a href="">التخصصات الإنسانية</a></li>
+                </ul>
+                </li>
+                <li>
+                    <a href="./">الجامعات والكليات</a>
+                </li>
+                <li>
+                    <a href="./">من نحن</a>
+                </li>
+                </ul>
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <form class="search">
+                <button type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                <input placeholder="ابحث عن التخصص" type="search" />
+            </form>
+            <a href="./" aria-label="takhassousi logo">
+                <img src="../tools/images/logo/blackLogo.svg" alt="">
+            </a>
+        </div>
+    </header>
+    <main class="container2">
+        <article>
+            <form class="metaData">
+                <div class="input">
+                    <label for="specialityAr">
+                            إسم التخصص بالعربية :
+                        </label>
+                    <input placeholder="إسم التخصص بالعربي" name="specialityAr" type="text" id="specialityAr" />
+                </div>
+                <div class="input">
+                    <label for="specialityFr">التخصص :</label>
+                    <select name="specialityFr" id="specialityFr">
+                            <option>إختر</option>
+                            <option>option two</option>
+                            <option>option three</option>
+                        </select>
+                </div>
+                <div class="input">
+                    <label for="depend">التخصص تابع لـ :</label>
+                    <select name="depend" id="depend">
+                            <option>option one</option>
+                            <option>option two</option>
+                            <option>option three</option>
+                        </select>
+                </div>
+                <div class="input">
+                    <label for="category">فئة التخصص : </label>
+                    <select name="category" id="category">
+                            <option>option one</option>
+                            <option>option two</option>
+                            <option>option three</option>
+                        </select>
+                </div>
+                <div class="input">
+                    <label for="priority1"> الأولوية الأولى</label>
+                    <select name="priority1" id="priority1">
+                            <option>option one</option>
+                            <option>option two</option>
+                            <option>option three</option>
+                        </select>
+                </div>
+                <div class="input">
+                    <label for="priority2">الأولوية الثانية</label>
+                    <select name="priority2" id="priority2">
+                            <option>option one</option>
+                            <option>option two</option>
+                            <option>option three</option>
+                        </select>
+                </div>
+                <div class="input">
+                    <label for="priority3">الأولوية الثالثة</label>
+                    <select name="priority3" id="priority3">
+                            <option>option one</option>
+                            <option>option two</option>
+                            <option>option three</option>
+                        </select>
+                </div>
+                <span>الشخصية المناسبة للتخصص : </span>
+                <div class="personality">
+                    <div>
+                        <input type="checkbox" />
+                        <label>الواقعية Realistic</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" />
+                        <label>المتحرية Investigative</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" />
+                        <label>الفنية Artistic</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" />
+                        <label>الاجتماعية Social</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" />
+                        <label>المبادرة أو المغامرة Enterprising</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" />
+                        <label>التقليدية Conventional</label>
+                    </div>
+                </div>
+            </form>
+            <header>
+                <h1>medcine | الطب البشري</h1>
+                <label>
+                        <input hidden type="file" name="" id="" />
+                        <i class="fa-solid fa-image"></i>
+                    </label>
+                <i class="fa-solid fa-pen-to-square"></i>
+                <p class="con">
+                    هذا النص سيظهر كنبذة تعريفية عن التخصص في اجزاء الموقع وكذلك الأمر بالنسبة للصورة يلز أن يكون مثير للفضول لجذب إهتمام القارئ
+                </p>
+            </header>
+            <div class="content">
+                <i class="fa-solid fa-pen-to-square"></i>
+                <h2>تعريف عام بالتخصص</h2>
+                <i class="fa-solid fa-pen-to-square"></i>
+                <div class="para con">
+                    Lorem ipsum dolor
+                </div>
+                <i class="fa-solid fa-pen-to-square"></i>
+                <h2>مسار دراسة</h2>
+                <i class="fa-solid fa-pen-to-square"></i>
+                <div class="para con">Lorem ipsum dolor</div>
+                <i class="fa-solid fa-pen-to-square"></i>
+                <h2> نظام الدراسة في تخصص : </h2><i class="fa-solid fa-pen-to-square"></i>
+                <div class="para con">Lorem ipsum dolor sit amet.</div>
+
+                <i class="fa-solid fa-pen-to-square"></i>
+                <h2>طريقة الدراسة في السنة اولى </h2><i class="fa-solid fa-pen-to-square"></i>
+                <div class="para con">
+                    Lorem ipsum dolor sit amet.
+                </div>
+                <i class="fa-solid fa-pen-to-square"></i>
+                <h2>نظام الاختبارات في التخصص : </h2>
+                <i class="fa-solid fa-pen-to-square"></i>
+                <div class="para con">
+                    Lorem ipsum dolor sit amet.
+                </div>
+                <i class="fa-solid fa-pen-to-square"></i>
+                <h2>قالو عن التخصص: </h2>
+                <i class="fa-solid fa-pen-to-square"></i>
+                <div class="para con">
+                    Lorem ipsum dolor sit amet.
+                </div>
+                <i class="fa-solid fa-pen-to-square"></i>
+                <h2>هل تنصحني بدراسة هذا التخصص؟ </h2>
+                <i class="fa-solid fa-pen-to-square"></i>
+                <div class="para con">
+                    Lorem ipsum dolor sit amet.
+                </div>
+                <i class="fa-solid fa-pen-to-square"></i>
+                <h2>هل هناك فرصة لطالب لمواصلة دراسته في الخارج؟ </h2>
+                <i class="fa-solid fa-pen-to-square"></i>
+                <div class="para con">
+                    Lorem ipsum dolor sit amet.
+                </div>
+                <i class="fa-solid fa-pen-to-square"></i>
+                <h2>ماهي فرص عمل لخريجي هذا التخصص؟ </h2>
+                <i class="fa-solid fa-pen-to-square"></i>
+                <div class="para con">
+                    Lorem ipsum dolor sit amet.
+                </div>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="submitIt">
+                <button class="send">إرسال المقال</button>
+            </div>
+        </article>
+        <aside>
+            <section class="social-media">
+                <span class="s-title title-a-r">تابعنا على السوشيال ميديا</span
+                    >
+                    <div class="icons">
+                        <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-youtube"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </section>
+                <section class="social-media">
+                    <span class="s-title title-a-l">إقرأ أيضا</span>
+                <div class="cards">
+                    <a href="#" class="card">
+                        <img src="../tools/images/home/microscope.png" alt="" />
+                        <div class="card-txt">
+                            <span class="card-t">تعرف على أفاق تخصص الفيزياء</span
+                                >
+                                <p>
+                                    بعيدًا، خلف كلمة جبال، بعيدًا عن بلدي
+                                    فوكاليا وكونسونانتيا، تعيش النصوص العمياء.
+                                    منفصلين يعيشون في Bookmarksgrove مباشرة على
+                                    ساحل Semantics، وهو محيط كبير اللغة. منفصلين
+                                    يعيشون في Bookmarksgrove. بعيدا جدا،
+                                </p>
+                            </div>
+                        </a>
+                        <a href="#" class="card">
+                            <img
+                                src="../tools/images/home/microscope.png"
+                                alt=""
+                            />
+                            <div class="card-txt">
+                                <span class="card-t"
+                                    >تعرف على أفاق تخصص الفيزياء</span
+                                >
+                                <p>
+                                    بعيدًا، خلف كلمة جبال، بعيدًا عن بلدي
+                                    فوكاليا وكونسونانتيا، تعيش النصوص العمياء.
+                                    منفصلين يعيشون في Bookmarksgrove مباشرة على
+                                    ساحل Semantics، وهو محيط كبير اللغة. منفصلين
+                                    يعيشون في Bookmarksgrove. بعيدا جدا،
+                                </p>
+                            </div>
+                        </a>
+                        <a href="#" class="card">
+                            <img src="../tools/images/temp/j.jpg" alt="" />
+                            <div class="card-txt">
+                                <span class="card-t"
+                                    >تعرف على أفاق تخصص الفيزياء</span
+                                >
+                                <p>
+                                    بعيدًا، خلف كلمة جبال، بعيدًا عن بلدي
+                                    فوكاليا وكونسونانتيا، تعيش النصوص العمياء.
+                                    منفصلين يعيشون في Bookmarksgrove مباشرة على
+                                    ساحل Semantics، وهو محيط كبير اللغة. منفصلين
+                                    يعيشون في Bookmarksgrove. بعيدا جدا،
+                                </p>
+                            </div>
+                        </a>
+                        <a href="#" class="card">
+                            <img
+                                src="../tools/images/home/microscope.png"
+                                alt=""
+                            />
+                            <div class="card-txt">
+                                <span class="card-t"
+                                    >تعرف على أفاق تخصص الفيزياء</span
+                                >
+                                <p>
+                                    بعيدًا، خلف كلمة جبال، بعيدًا عن بلدي
+                                    فوكاليا وكونسونانتيا، تعيش النصوص العمياء.
+                                    منفصلين يعيشون في Bookmarksgrove مباشرة على
+                                    ساحل Semantics، وهو محيط كبير اللغة. منفصلين
+                                    يعيشون في Bookmarksgrove. بعيدا جدا،
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+            </aside>
+        </main>
+
+        <form class="imageBox">
+            <i class="fa-solid fa-xmark"></i>
+            <span class="t">رابط صورة من الأنترنت (مستحسن)</span>
+                            <input required style=" direction: ltr;" placeholder="https://" type="url">
+                            <span class="t">صورة من جهازك:</span>
+                            <label>
+            <input  hidden="true" type="file" name="" id="" />
+            <i class="fa-solid fa-image"></i>
+            </label>
+                            <span class="imgData"></span>
+                            <button type="submit">إدراج</button>
+                            </form>
+                            <div class="styleBtns">
+                                <button type="button" data-c="bold">
+                <i class="fa-solid fa-bold"></i>
+            </button>
+                                <button type="button" data-c="italic">
+                <i class="fa-solid fa-italic"></i>
+            </button>
+                                <button type="button" data-c="underline">
+                <i class="fa-solid fa-underline"></i>
+            </button>
+                                <button type="button" data-c="insertUnorderedList">
+                <i class="fa-solid fa-list-ul"></i>
+            </button>
+                                <button type="button" data-c="insertorderedList">
+                <i class="fa-solid fa-list-ol"></i>
+            </button>
+                                <button type="button" data-c="createLink">
+                <i class="fa-solid fa-link"></i>
+            </button>
+                                <button type="button" data-c="justifyCenter">
+                <i class="fa-solid fa-align-center"></i>
+            </button>
+                                <button type="button" data-c="justifyFull">
+                <i class="fa-solid fa-align-justify"></i>
+            </button>
+                                <button type="button" data-c="justifyLeft">
+                <i class="fa-solid fa-align-left"></i>
+            </button>
+                                <button type="button" data-c="justifyRight">
+                <i class="fa-solid fa-align-right"></i>
+            </button>
+                                <button type="button" data-c="insertImage">
+                <i class="fa-solid fa-image"></i>
+            </button>
+                            </div>
+                            <div class="dialogue error">
+                                <span class="t-s">لقد تم الإرسال</span>
+                                <p>سيتم معالجة المقال و نشره في أقرب وقت نشكركم على تعاونكم معنا</p>
+                                <button class="close">شكرا</button>
+                            </div>
+                            <footer>
+                                <div class="container">
+                                    <div class="wrapper">
+                                        <img src="../tools/images/logo/whiteLogo.svg" alt="">
+                                        <div class="socialMedia">
+                                            <a href="./"><i class="fa-brands fa-facebook-f"></i></a>
+                                            <a href="./"><i class="fa-brands fa-instagram"></i></a>
+                                            <a href="./"><i class="fa-solid fa-paper-plane"></i></a>
+                                            <a href="./"><i class="fa-solid fa-at"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="cp"><span>جميع الحقوق محفوظة © تخصصي 2022 </span></div>
+                            </footer>
+                            <script src="../tools/js/localforage.min.js" defer></script>
+                            <script src="main.js" defer></script>
+</body>
+
+</html>
