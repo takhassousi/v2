@@ -171,14 +171,10 @@ main
                 margin-bottom: 8px
             p
                 margin: 0
-            &:last-child
-                transform: translateX(50%)
 
 @media (min-width:816px)
     .cards-0
         grid: auto /repeat(3, auto)
-        .card-0:last-child
-            transform: translateX(0)
 
 .s3 h2
     margin-bottom: 64px
@@ -419,6 +415,7 @@ main
 
 .cards-0 .act , .act .cards-1 .card-1
     animation: swip 1s forwards
+    
 @keyframes swip
     to
         transform: translateX(0)

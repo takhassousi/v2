@@ -19,6 +19,8 @@
   --gray-7: #777;
   --dark-red: #974964;
   --good-green: #0f9d58;
+  --gold:#FFC70C;
+  --gold-80: rgba(255, 198, 12, 0.2);
   --fast: .5s;
   --glo: hsl(356.4, 90.4%, 67.5%);
   --red-shadow: 0 10px 35px 0 rgba(246,97,106,.5019607843137255);
@@ -86,7 +88,6 @@ header.top .container {
 
 * {
   box-sizing: border-box;
-  direction: rtl;
 }
 
 button {
@@ -591,16 +592,10 @@ main h1, main h2 {
   .cards-0 .card-0 p {
     margin: 0;
   }
-  .cards-0 .card-0:last-child {
-    transform: translateX(50%);
-  }
 }
 @media (min-width: 816px) {
   .cards-0 {
     grid: auto/repeat(3, auto);
-  }
-  .cards-0 .card-0:last-child {
-    transform: translateX(0);
   }
 }
 .s3 h2 {
