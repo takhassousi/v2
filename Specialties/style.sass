@@ -100,17 +100,6 @@ input[type=number]
             input,select
                 font-size: 12px
 @media (max-Width:700px)
-    body .cards .card p
-        margin-top: 4px
-        overflow: hidden
-        text-overflow: ellipsis
-        display: -webkit-box
-        -webkit-box-orient: vertical
-        -webkit-line-clamp: 4
-        line-height: 16px
-        max-height: 64px
-        direction: rtl
-        font-size: 12px
     h1
         font-size: 39px
     body form.filter
@@ -145,46 +134,8 @@ input[type=number]
 
 @media (min-width: 750px)
     header .menu #navList a:hover
-        border-bottom-color: white 
+        border-bottom-color: white
 
-.cards
-    margin-block: 64px
-    border-radius: 8px
-    overflow: hidden
-    box-shadow: var(--1db-penumbra),var(--1db-ambient),var(--1db-umbra)
-    .act
-        animation: fadeIn 1s .2s forwards
-    .card
-        bottom: -60px
-        opacity: 0
-        position: relative
-        display: flex
-        flex-flow: row-reverse nowrap
-        column-gap: 8px
-        overflow: hidden
-        height: 168px
-        text-align: right
-        border-bottom: 1px solid #ddd
-        padding: 8px
-        img
-            height: 100%
-        p,span
-            font-size: 14px
-            color: #444
-        p
-            overflow: hidden
-            text-overflow: ellipsis
-            display: -webkit-box
-            -webkit-box-orient: vertical
-            -webkit-line-clamp: 3
-            margin-top: 8px
-            line-height: 16px
-            max-height: 48px
-            direction: rtl
-        h2
-            font-size: 22px
-            font-family: var(--cairo)
-            margin-block: 4px
 .showMore
     display: flex
     flex-flow: row nowrap
@@ -195,17 +146,97 @@ input[type=number]
     li
         color: #222
         cursor: pointer
-        padding: 2px 8px 
+        padding: 2px 8px
         &.act
             color: var(--primary)
         &:not(:last-child)
             border-right: 1px solid #7777
-        &:hover 
+        &:hover
             color: var(--dark-red)
-
 
 @keyframes fadeIn
     to
         opacity: 1
         bottom: 0
         left: 0
+
+.searchName
+    margin: 32px auto 16px
+    width: fit-content
+    background-color: #E1EEF5
+    position: relative
+    box-shadow: var(--4db-Umbra) ,var(--4db-penumbra)
+    border-radius: 50px
+    padding: 16px 16px 16px 80px
+    input
+        border: none
+    [type="search"]
+        text-align: right
+        background-color: transparent
+        outline: none
+        font-size: 18px
+    [type="submit"]
+        @extend %A-center-Y
+        left: 12px
+        border-radius: 50px
+        padding: 6px 14px
+        color: white
+        cursor: pointer
+        font-size: 18px
+        background-color: var(--primary)
+        box-shadow: var(--2db-ambient), var(--2db-penumbra), var(--2db-umbra)
+        &:hover
+            filter: saturate(.9)
+
+table
+    border-collapse: collapse
+.mainTAble
+    border: 1px #bbb solid
+    direction: rtl
+    margin-block: 32px
+    border-collapse: collapse
+    border-spacing: 0
+    width: 100%
+    .gInfo
+        display: none
+        background-color: #f7f7f7
+        td
+            border: none
+            table td 
+                border: 1px solid #000
+                &:nth-of-type(1)
+                    background-color: var(--good-green)
+                    color: white
+                &:nth-of-type(2)
+                    background-color: white
+    tr.showMe
+        display: table-row
+    thead th
+        padding: 8px 4px
+        background-color: var(--blue-dark)
+        color: white
+        border: 1px white solid
+    [colspan="3"]
+        background-color: hsl(218.4, 47.1%, 38%)
+    td
+        border: 1px solid #bbb
+        padding: 2px
+        text-align: center
+        a 
+            color: blue 
+            text-decoration: underline
+    td.show
+        i
+            background-color: white
+            padding: 3px
+            font-size: 14px
+            border-radius: 5px
+            color: var(--good-green)
+            border: 1px var(--good-green) solid
+            cursor: pointer
+    tbody .r1
+        background-color: rgba(0, 49, 133, 0.15)
+    tr td:nth-of-type(3n+5)
+        background-color: rgba(214, 31, 52,.7)
+    tr td:nth-of-type(3n+6)
+        background-color: rgba(214, 31, 52,.4)

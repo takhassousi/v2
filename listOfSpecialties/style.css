@@ -77,6 +77,7 @@ button {
 }
 
 html, body {
+  font-family: var(--tajawal);
   overflow-x: hidden;
   max-width: 100vw;
   margin: 0;
@@ -252,7 +253,6 @@ header.top .search [type=search] {
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    border-top: 1px #eee solid;
     border-radius: 0 0 12px 12px;
   }
   header.top .menu #navList #sps li {
@@ -368,17 +368,17 @@ body {
   background: url("../tools/images/forAll/banner.png") no-repeat 37% -190px;
 }
 
-header .fa-bars {
+header.top .fa-bars {
   color: white;
 }
 @media (min-width: 750px) {
-  header .menu #navList a:hover {
+  header.top .menu #navList a:hover {
     color: white;
   }
-  header .menu > #navList li.act a {
+  header.top .menu > #navList li.act a {
     border-bottom-color: white;
   }
-  header .menu > #navList li a, header .menu > #navList li.act a {
+  header.top .menu > #navList li a, header.top .menu > #navList li.act a {
     color: white;
   }
 }

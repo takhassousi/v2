@@ -24,7 +24,6 @@ const menuBtn = document.querySelector("header i.fa-bars"),
     watchMe = document.querySelectorAll(".watchMe"),
     listSps = document.getElementById("list-sps"),
     sps = document.getElementById("sps"),
-    nums = document.querySelectorAll(".cards .card span"),
     closeMenu = document.querySelector("header .menu .fa-xmark");
 
 menuBtn.onclick = () => {

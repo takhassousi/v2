@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>takhassousi | من نحن</title>
-    <link rel="stylesheet" link rel="preload" as="style" href="./style.css" />
+    <title>takhassousi | تخصصي</title>
+    <link rel="stylesheet" link rel="preload" as="style" href="style.css" />
     <link rel="stylesheet" link rel="preload" as="style" href="../tools/fontawesome/css/all.min.css" />
     <link rel="manifest" href="manifest.json" />
     <meta name="theme-color" content="#E44154" />
@@ -49,80 +49,60 @@
                     <li>
                         <a href="./">الجامعات والكليات</a>
                     </li>
-                    <li class="act">
+                    <li>
                         <a href="./">من نحن</a>
                     </li>
                 </ul>
                 <i class="fa-solid fa-xmark"></i>
             </div>
-            <form class="search">
+            <form style="display: none;" class="search">
                 <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                 <input placeholder="ابحث عن التخصص" type="search" />
             </form>
             <a href="./" aria-label="takhassousi logo">
-                <img src="../tools/images/logo/whiteLogo.svg" alt="">
+                <img src="../tools/images/logo/blackLogo.svg" alt="">
             </a>
         </div>
     </header>
-    <h1>من نحن_</h1>
-    <section class="s1 container">
-        <figure class="act">
-            <img src="../tools/images/about/about2.webp" alt="">
-        </figure>
-        <div class="s-txt act">
-            <span class="subtitle-sp">من نكون</span>
-            <h2 class="underLine">موقع الكتروني لتصفح التخصصات الجامعية</h2>
-            <p class="sub-p">
-                نساعدك على الاجابة على هذا السؤال بما يوافق مؤهلاتك وميولاتك
-            </p>
+    <main>
+        <div class="title">
+            <h1>إنشاء حساب</h1>
+            <span>انشئ حساب وساهم في مساعدة الطلبة على إختيار تخصص</span>
         </div>
-    </section>
-    <section class="s2 container">
-        <div class="s-txt watchMe">
-            <span class="subtitle-sp">أهدافنا</span>
-            <h2 class="underLine">الأهداف التي نسعى لها</h2>
-            <ul class="simple">
-                <li>تقديم معلومات كافية عن طبيعة التخصصات في الجامعات , ومجالات العمل المستقبلية المتاحة لكل تخصص</li>
-                <li>بناء نظام معلومات متكامل وشامل</li>
-                <li>السعي المستمر نحو التميز في مجالات خدمة الطلبة كافة، وذويهم، وكذلك في تقديم خدمات متميزة، من حيث طبيعة المعلومات، والبيانات المتعلقة بتخصصات الجامعات</li>
-                <li>التركيز على خدمة الطلبة.</li>
-            </ul>
-        </div>
-        <figure class="watchMe">
-            <img src="../tools/images/about/about.png" alt="">
-        </figure>
-    </section>
-    <section class="s3 container ">
-        <div class="s-txt watchMe">
-            <h2 class="underLine">إنجازاتنا</h2>
-        </div>
-        <div class="cards">
-            <div class="card watchMe">
-                <img src="../tools/images/about/school.png" alt="">
-                <span data-lim="345">0</span>
-                <h3>مقال تعريفي بالجامعات</h3>
+        <form action="/login">
+            <div class="row">
+                <input class="reg" required placeholder="الإسم" type="text" name="firstName">
+                <input class="reg" required placeholder="اللقب" type="text" name="lastName">
             </div>
-            <div class="card watchMe">
-                <img src="../tools/images/about/medal.png" alt="">
-                <span data-lim="345">0</span>
-                <h3>مقال تعريفي بالجامعات</h3>
+            <input required placeholder="الإيميل" type="email" name="email" id="email">
+            <input class="reg" required placeholder="رقم الهاتف" type="tel" name="tel" id="tel">
+            <input required placeholder="كلمة سر" type="password" name="password">
+            <input class="reg" required placeholder="تأكيد كلمة السر" type="password" name="password2">
+            <input class="reg" required placeholder="العمل أو التخصص" type="text" name="job">
+            <label class="reg" required for="birthday">تاريخ الميلاد</label>
+            <input class="reg" required type="date" id="birthday" name="birthday">
+            <div class="reg">
+                <div class="row0">
+                    <span>الجنس :</span>
+                    <div class="row">
+                        <div class="row">
+                            <label for="male">ذكر</label>
+                            <input type="radio" required name="gender" id="male">
+                        </div>
+                        <div class="row">
+                            <label for="male">أنثى</label>
+                            <input type="radio" required name="gender" id="female">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="card watchMe">
-                <img src="../tools/images/about/medal.png" alt="">
-                <span data-lim="345">0</span>
-                <h3>مقال تعريفي بالجامعات</h3>
-            </div>
-            <div class="card watchMe">
-                <img src="../tools/images/about/medal.png" alt="">
-                <span data-lim="345">0</span>
-                <h3>مقال تعريفي بالجامعات</h3>
-            </div>
-        </div>
-    </section>
+            <button type="submit">أنشئ حسابك</button>
+            <span class="switch">تسجيل الدخول</span>
+        </form>
+    </main>
     <footer>
         <div class="container">
             <div class="wrapper">
-
                 <img src="../tools/images/logo/whiteLogo.svg" alt="">
                 <div class="socialMedia">
                     <a href="./"><i class="fa-brands fa-facebook-f"></i></a>
@@ -134,10 +114,7 @@
         </div>
         <div id="cp"><span>جميع الحقوق محفوظة © تخصصي 2022 </span></div>
     </footer>
-    <script src="main.js" defer></script>
+    <script src="main.js"></script>
 </body>
-
-
-
 
 </html>

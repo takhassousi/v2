@@ -4,12 +4,13 @@
     direction: rtl
 .styleBtns
     max-height: 90vh
+    height: 500px
     z-index: 2
     @extend %Center-Fixed-Y
+    @extend %F-between
+    padding-block: 24px
     right: 16px
-    display: flex
     flex-flow: column nowrap
-    row-gap: 16px
     @media (min-width:600px)
 .metaData
     @extend %block

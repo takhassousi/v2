@@ -1,7 +1,3 @@
-// if ("serviceWorker" in navigator) navigator.serviceWorker.register('../sw.js').catch(err => console.log(err))
-
-// header functions Start
-
 const menuBtn = document.querySelector("header i.fa-bars"),
     menuList = document.querySelector("header .menu"),
     watchMe = document.querySelectorAll(".watchMe"),

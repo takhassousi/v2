@@ -6,9 +6,7 @@
     --nav-c-g: 24px
 *
     direction: ltr
-body
-    min-height: 100vh
-    font-family: var(--tajawal)
+
 html body header.top .menu #navList #list-sps
     padding-inline: 8px
     &:hover
@@ -58,7 +56,7 @@ html body header.top .menu #navList #list-sps
                 position: absolute
                 top: -8px
                 cursor: pointer
-                right: -16px
+                right: -8px
             img
                 box-shadow: var(--2db-ambient),var(--2db-penumbra) ,var(--2db-umbra)
                 border-radius: 50%
@@ -246,6 +244,7 @@ html body
     border-radius: 12px
     @extend %F-between
     flex-flow: column nowrap
+    display: none
     img 
         height: 100px
         width: 100px

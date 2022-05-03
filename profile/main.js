@@ -38,6 +38,7 @@ acceptBtn.onclick = () => {
     document.documentElement.style.overflow = "unset"
 }
 changePpBtn.onclick = () => {
+    PpPreview.src = currentPp.src
     windowPp.style.display = "flex"
     document.documentElement.style.overflow = "hidden"
 }

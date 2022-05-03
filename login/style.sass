@@ -1,0 +1,81 @@
+@use '../tools/sass/_position' as *
+@use '../tools/sass/_header' as *
+@use '../tools/sass/_footer' as *
+
+:root
+    --nav-f-s: 14px
+    --nav-c-g: 24px
+
+body
+    min-height: 100vh
+
+main
+    direction: rtl
+    padding-inline: 8px
+    text-align: right
+    max-width: 500px
+    margin: 64px auto
+    min-width: 300px
+h1
+    margin: 12px 0
+.title
+    padding-bottom: 12px
+    border-bottom: 1px #999 solid
+    margin-bottom: 16px
+.row
+    @extend %F-between
+    column-gap: 16px
+input
+    margin-block: 8px
+    font-size: 18px
+    text-align: right
+    background-color: #eee
+    border: none
+    width: 100%
+    border-radius: 12px
+    padding: 12px 16px
+
+[for="birthday"]
+    font-size: 18px
+#birthday
+    width: fit-content
+    background: white
+    border: 1px solid #aaa
+    padding: 4px 12px 4px 0
+    text-align: left
+    border-radius: 4px
+    margin-inline-start: 8px
+.row0
+    margin-block: 8px
+    display: flex
+    flex-flow: row nowrap
+    align-items: center
+    column-gap: 16px
+    span 
+        font-size: 18px
+
+[type="submit"]
+    background-color: var(--good-green)
+    padding: 12px 20px
+    font-size: 22px
+    border-radius: 16px
+    border: none
+    margin-top: 32px
+    min-width: fit-content
+    width: 60%
+    color: white
+    text-align: center
+    margin-inline: auto
+    display: block
+    cursor: pointer
+    box-shadow: var(--2db-ambient), var(--2db-umbra) ,var(--2db-penumbra)
+    &:hover
+        filter: saturate(.7)
+.switch
+    text-decoration: underline
+    font-size: 18px
+    margin-inline: auto
+    display: block
+    width: fit-content
+    cursor: pointer
+    margin-top: 24px

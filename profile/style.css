@@ -97,6 +97,7 @@ button {
 }
 
 html, body {
+  font-family: var(--tajawal);
   overflow-x: hidden;
   max-width: 100vw;
   margin: 0;
@@ -272,7 +273,6 @@ header.top .search [type=search] {
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    border-top: 1px #eee solid;
     border-radius: 0 0 12px 12px;
   }
   header.top .menu #navList #sps li {
@@ -387,11 +387,6 @@ footer .socialMedia i:hover {
   direction: ltr;
 }
 
-body {
-  min-height: 100vh;
-  font-family: var(--tajawal);
-}
-
 html body header.top .menu #navList #list-sps {
   padding-inline: 8px;
 }
@@ -449,7 +444,7 @@ html body header.top .menu #navList #list-sps i.fa-plus {
   position: absolute;
   top: -8px;
   cursor: pointer;
-  right: -16px;
+  right: -8px;
 }
 .basics .prs .personalImg img {
   box-shadow: var(--2db-ambient), var(--2db-penumbra), var(--2db-umbra);
@@ -696,6 +691,7 @@ svg.l1 {
   min-width: 300px;
   border-radius: 12px;
   flex-flow: column nowrap;
+  display: none;
 }
 .editPr img {
   height: 100px;
